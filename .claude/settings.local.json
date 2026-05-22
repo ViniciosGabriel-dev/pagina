@@ -54,7 +54,11 @@
       "Bash(git remote *)",
       "Bash(git branch *)",
       "Bash(git push *)",
-      "Bash(xargs grep -l \"useEffect\\\\|fetch.*detect\")"
+      "Bash(xargs grep -l \"useEffect\\\\|fetch.*detect\")",
+      "Bash(node test-production.js)",
+      "Bash(curl -s -X POST https://pagina-phi-five.vercel.app/api/detect -H 'Content-Type: application/json' -H 'User-Agent: curl/7.64.1')",
+      "Bash(curl -s -X POST https://cloacker-production-849d.up.railway.app/api/detect-visitor -H 'Authorization: Bearer 57473cb2771ac49531c7657889d09e26a837aa67189ac317c8106c6675e37134' -H 'Content-Type: application/json' -d '{ *)",
+      "Bash(curl -s -X POST https://pagina-phi-five.vercel.app/api/detect -H 'Content-Type: application/json' -H 'User-Agent: Mozilla/5.0 \\(compatible; Googlebot/2.1; +http://www.google.com/bot.html\\)')"
     ]
   }
 }
