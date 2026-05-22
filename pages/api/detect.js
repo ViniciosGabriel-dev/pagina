@@ -58,6 +58,7 @@ export default async function handler(req, res) {
       headers,
       geo: req.geo || { country: 'unknown' }
     });
+    console.log(`[DETECT] IP: ${ip} | UA: ${userAgent.substring(0, 60)}`);
 
     // Detecção customizada de bots comuns (antes da PASCHA)
     const botSignatures = [
