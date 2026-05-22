@@ -1,633 +1,19 @@
 
 > cloacker-pascha-integration@1.0.0 dev
-> next dev
+> next dev -p 3005
 
- ⚠ Port 3000 is in use, trying 3001 instead.
- ⚠ Port 3001 is in use, trying 3002 instead.
-  ▲ Next.js 14.2.35
-  - Local:        http://localhost:3002
-  - Environments: .env.local
-
- ✓ Starting...
- ✓ Ready in 1338ms
- ✓ Compiled /api/detect in 173ms (63 modules)
-[DETECT] Enviando para PASCHA: {
-  ip: '::1',
-  userAgent: 'curl/7.64.1...',
-  headers: {
-    'accept-language': '',
-    'accept-encoding': '',
-    referer: '',
-    accept: '*/*',
-    connection: '',
-    'sec-ch-ua': ''
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA] Score breakdown: {
-  botSignature: 0,
-  browserHeaders: 0,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 0
-}
-[PASCHA] Cache hit: true
-[DETECT] Resposta PASCHA: {
-  isBot: false,
-  score: 0,
-  confidence: 'very-low',
-  cached: true,
-  error: undefined
-}
-[::1] Bot: false | Score: 0 | Cached: true
- POST /api/detect 200 in 859ms
-[DETECT] Enviando para PASCHA: {
-  ip: '::1',
-  userAgent: 'curl/7.64.1...',
-  headers: {
-    'accept-language': 'en-US,en;q=0.9',
-    'accept-encoding': 'gzip, deflate, br',
-    referer: 'https://example.com',
-    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9',
-    connection: 'keep-alive',
-    'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="91"'
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA] Score breakdown: {
-  botSignature: 0,
-  browserHeaders: 0,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 0
-}
-[PASCHA] Cache hit: true
-[DETECT] Resposta PASCHA: {
-  isBot: false,
-  score: 0,
-  confidence: 'very-low',
-  cached: true,
-  error: undefined
-}
-[::1] Bot: false | Score: 0 | Cached: true
- POST /api/detect 200 in 607ms
-[DETECT] Enviando para PASCHA: {
-  ip: '::1',
-  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
-  headers: {
-    'accept-language': 'en-US,en;q=0.9',
-    'accept-encoding': 'gzip, deflate, br',
-    referer: 'https://example.com',
-    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9',
-    connection: 'keep-alive',
-    'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="91"'
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA] Score breakdown: {
-  botSignature: 0,
-  browserHeaders: 0,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 0
-}
-[PASCHA] Cache hit: true
-[DETECT] Resposta PASCHA: {
-  isBot: false,
-  score: 0,
-  confidence: 'very-low',
-  cached: true,
-  error: undefined
-}
-[::1] Bot: false | Score: 0 | Cached: true
- POST /api/detect 200 in 611ms
-[DETECT] Enviando para PASCHA: {
-  ip: '::1',
-  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
-  headers: {
-    'accept-language': 'en-US,en;q=0.9',
-    'accept-encoding': 'gzip, deflate, br',
-    referer: 'https://example.com',
-    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9',
-    connection: 'keep-alive',
-    'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="91"'
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA] Score breakdown: {
-  botSignature: 0,
-  browserHeaders: 0,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 0
-}
-[PASCHA] Cache hit: true
-[DETECT] Resposta PASCHA: {
-  isBot: false,
-  score: 0,
-  confidence: 'very-low',
-  cached: true,
-  error: undefined
-}
-[::1] Bot: false | Score: 0 | Cached: true
- POST /api/detect 200 in 611ms
- ✓ Compiled in 60ms (63 modules)
-[DETECT] Enviando para PASCHA: {
-  ip: '::1',
-  userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://ww...',
-  headers: {
-    'accept-language': 'en-US,en;q=0.9',
-    'accept-encoding': 'gzip, deflate, br',
-    referer: '',
-    accept: '*/*',
-    connection: 'keep-alive',
-    'sec-ch-ua': ''
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA_CLIENT] Request body being sent: {
-  "ip": "::1",
-  "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
-  "headers": {
-    "accept-language": "en-US,en;q=0.9",
-    "accept-encoding": "gzip, deflate, br",
-    "referer": "",
-    "accept": "*/*",
-    "connection": "keep-alive",
-    "sec-ch-ua": ""
-  },
-  "geo": {
-    "country": "unknown"
-  }
-}
-[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
-[PASCHA_CLIENT] API Key present: true
-[PASCHA] Score breakdown: {
-  botSignature: 0,
-  browserHeaders: 0,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 0
-}
-[PASCHA] Cache hit: true
-[DETECT] Resposta PASCHA: {
-  isBot: false,
-  score: 0,
-  confidence: 'very-low',
-  cached: true,
-  error: undefined
-}
-[::1] Bot: false | Score: 0 | Cached: true
- POST /api/detect 200 in 617ms
- ✓ Compiled in 49ms (63 modules)
-[DETECT] Enviando para PASCHA: {
-  ip: '::1',
-  userAgent: 'TestBot/1.0...',
-  headers: {
-    'accept-language': '',
-    'accept-encoding': '',
-    referer: '',
-    accept: '*/*',
-    connection: '',
-    'sec-ch-ua': ''
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA_CLIENT] Request body being sent: {
-  "ip": "::1",
-  "userAgent": "TestBot/1.0",
-  "headers": {
-    "accept-language": "",
-    "accept-encoding": "",
-    "referer": "",
-    "accept": "*/*",
-    "connection": "",
-    "sec-ch-ua": ""
-  },
-  "geo": {
-    "country": "unknown"
-  }
-}
-[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
-[PASCHA_CLIENT] API Key present: true
-[PASCHA_CLIENT] Raw response from PASCHA: {
-  "success": true,
-  "cached": true,
-  "cacheAge": 2820862,
-  "isBot": false,
-  "score": 0,
-  "scoreBreakdown": {
-    "botSignature": 0,
-    "browserHeaders": 0,
-    "tlsFingerprint": 0,
-    "proxyDetection": 0,
-    "encodingHeaders": 0
-  },
-  "confidence": "very-low",
-  "recommendation": "oferta",
-  "timestamp": "2026-05-22T00:22:19.319Z"
-}
-[PASCHA] Score breakdown: {
-  botSignature: 0,
-  browserHeaders: 0,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 0
-}
-[PASCHA] Cache hit: true
-[DETECT] Resposta PASCHA: {
-  isBot: false,
-  score: 0,
-  confidence: 'very-low',
-  cached: true,
-  error: undefined
-}
-[::1] Bot: false | Score: 0 | Cached: true
- POST /api/detect 200 in 612ms
- ✓ Compiled in 48ms (63 modules)
-[DETECT] IP extraction debug: {
-  'x-forwarded-for': '203.45.67.100',
-  'cf-connecting-ip': undefined,
-  'socket.remoteAddress': '::1',
-  'final-ip': '203.45.67.100'
-}
-[DETECT] Enviando para PASCHA: {
-  ip: '203.45.67.100',
-  userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1)...',
-  headers: {
-    'accept-language': '',
-    'accept-encoding': '',
-    referer: '',
-    accept: '*/*',
-    connection: '',
-    'sec-ch-ua': ''
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA_CLIENT] Request body being sent: {
-  "ip": "203.45.67.100",
-  "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1)",
-  "headers": {
-    "accept-language": "",
-    "accept-encoding": "",
-    "referer": "",
-    "accept": "*/*",
-    "connection": "",
-    "sec-ch-ua": ""
-  },
-  "geo": {
-    "country": "unknown"
-  }
-}
-[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
-[PASCHA_CLIENT] API Key present: true
-[PASCHA_CLIENT] Raw response from PASCHA: {
-  "success": true,
-  "cached": false,
-  "isBot": true,
-  "score": 50,
-  "scoreBreakdown": {
-    "botSignature": 50,
-    "browserHeaders": 0,
-    "tlsFingerprint": 0,
-    "proxyDetection": 0,
-    "encodingHeaders": 0
-  },
-  "confidence": "medium",
-  "recommendation": "safe",
-  "details": {
-    "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1)",
-    "country": "unknown",
-    "tlsAnalysis": {
-      "tlsScore": -15,
-      "tlsVersion": "unknown",
-      "cipherCount": 1,
-      "hasExtensions": false,
-      "isHeadless": false
-    }
-  },
-  "timestamp": "2026-05-22T01:09:55.062Z"
-}
-[PASCHA] Score breakdown: {
-  botSignature: 50,
-  browserHeaders: 0,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 0
-}
-[PASCHA] Cache hit: false
-[DETECT] Resposta PASCHA: {
-  isBot: true,
-  score: 50,
-  confidence: 'medium',
-  cached: false,
-  error: undefined
-}
-[203.45.67.100] Bot: true | Score: 50 | Cached: false
- POST /api/detect 200 in 609ms
-[DETECT] IP extraction debug: {
-  'x-forwarded-for': '203.45.67.100',
-  'cf-connecting-ip': undefined,
-  'socket.remoteAddress': '::1',
-  'final-ip': '203.45.67.100'
-}
-[DETECT] Enviando para PASCHA: {
-  ip: '203.45.67.100',
-  userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://ww...',
-  headers: {
-    'accept-language': 'en-US,en;q=0.9',
-    'accept-encoding': 'gzip, deflate, br',
-    referer: '',
-    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9',
-    connection: 'keep-alive',
-    'sec-ch-ua': ''
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA_CLIENT] Request body being sent: {
-  "ip": "203.45.67.100",
-  "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
-  "headers": {
-    "accept-language": "en-US,en;q=0.9",
-    "accept-encoding": "gzip, deflate, br",
-    "referer": "",
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9",
-    "connection": "keep-alive",
-    "sec-ch-ua": ""
-  },
-  "geo": {
-    "country": "unknown"
-  }
-}
-[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
-[PASCHA_CLIENT] API Key present: true
-[PASCHA_CLIENT] Raw response from PASCHA: {
-  "success": true,
-  "cached": true,
-  "cacheAge": 23120,
-  "isBot": true,
-  "score": 50,
-  "scoreBreakdown": {
-    "botSignature": 50,
-    "browserHeaders": 0,
-    "tlsFingerprint": 0,
-    "proxyDetection": 0,
-    "encodingHeaders": 0
-  },
-  "confidence": "medium",
-  "recommendation": "safe",
-  "timestamp": "2026-05-22T01:09:55.062Z"
-}
-[PASCHA] Score breakdown: {
-  botSignature: 50,
-  browserHeaders: 0,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 0
-}
-[PASCHA] Cache hit: true
-[DETECT] Resposta PASCHA: {
-  isBot: true,
-  score: 50,
-  confidence: 'medium',
-  cached: true,
-  error: undefined
-}
-[203.45.67.100] Bot: true | Score: 50 | Cached: true
- POST /api/detect 200 in 608ms
-[DETECT] IP extraction debug: {
-  'x-forwarded-for': '192.168.1.100',
-  'cf-connecting-ip': undefined,
-  'socket.remoteAddress': '::1',
-  'final-ip': '192.168.1.100'
-}
-[DETECT] Enviando para PASCHA: {
-  ip: '192.168.1.100',
-  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
-  headers: {
-    'accept-language': 'en-US,en;q=0.9',
-    'accept-encoding': 'gzip, deflate, br',
-    referer: '',
-    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9',
-    connection: 'keep-alive',
-    'sec-ch-ua': ''
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA_CLIENT] Request body being sent: {
-  "ip": "192.168.1.100",
-  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/91.0.4472.124 Safari/537.36",
-  "headers": {
-    "accept-language": "en-US,en;q=0.9",
-    "accept-encoding": "gzip, deflate, br",
-    "referer": "",
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9",
-    "connection": "keep-alive",
-    "sec-ch-ua": ""
-  },
-  "geo": {
-    "country": "unknown"
-  }
-}
-[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
-[PASCHA_CLIENT] API Key present: true
-[PASCHA_CLIENT] Raw response from PASCHA: {
-  "success": true,
-  "cached": false,
-  "isBot": false,
-  "score": 0,
-  "scoreBreakdown": {
-    "botSignature": 0,
-    "browserHeaders": 0,
-    "tlsFingerprint": 0,
-    "proxyDetection": 0,
-    "encodingHeaders": 0
-  },
-  "confidence": "very-low",
-  "recommendation": "oferta",
-  "details": {
-    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/91.0.4472.124 Safari/537.36",
-    "country": "unknown",
-    "tlsAnalysis": {
-      "tlsScore": -15,
-      "tlsVersion": "unknown",
-      "cipherCount": 1,
-      "hasExtensions": false,
-      "isHeadless": false
-    }
-  },
-  "timestamp": "2026-05-22T01:10:18.881Z"
-}
-[PASCHA] Score breakdown: {
-  botSignature: 0,
-  browserHeaders: 0,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 0
-}
-[PASCHA] Cache hit: false
-[DETECT] Resposta PASCHA: {
-  isBot: false,
-  score: 0,
-  confidence: 'very-low',
-  cached: false,
-  error: undefined
-}
-[192.168.1.100] Bot: false | Score: 0 | Cached: false
- POST /api/detect 200 in 185ms
-[DETECT] IP extraction debug: {
-  'x-forwarded-for': '189.45.67.123',
-  'cf-connecting-ip': undefined,
-  'socket.remoteAddress': '::1',
-  'final-ip': '189.45.67.123'
-}
-[DETECT] Enviando para PASCHA: {
-  ip: '189.45.67.123',
-  userAgent: 'curl/7.64.1...',
-  headers: {
-    'accept-language': 'en-US,en;q=0.9',
-    'accept-encoding': 'gzip, deflate, br',
-    referer: '',
-    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9',
-    connection: 'keep-alive',
-    'sec-ch-ua': ''
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA_CLIENT] Request body being sent: {
-  "ip": "189.45.67.123",
-  "userAgent": "curl/7.64.1",
-  "headers": {
-    "accept-language": "en-US,en;q=0.9",
-    "accept-encoding": "gzip, deflate, br",
-    "referer": "",
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9",
-    "connection": "keep-alive",
-    "sec-ch-ua": ""
-  },
-  "geo": {
-    "country": "unknown"
-  }
-}
-[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
-[PASCHA_CLIENT] API Key present: true
-[PASCHA_CLIENT] Raw response from PASCHA: {
-  "success": true,
-  "cached": true,
-  "cacheAge": 229078,
-  "isBot": true,
-  "score": 95,
-  "scoreBreakdown": {
-    "botSignature": 50,
-    "browserHeaders": 30,
-    "tlsFingerprint": 0,
-    "proxyDetection": 0,
-    "encodingHeaders": 15
-  },
-  "confidence": "very-high",
-  "recommendation": "safe",
-  "timestamp": "2026-05-22T01:06:30.502Z"
-}
-[PASCHA] Score breakdown: {
-  botSignature: 50,
-  browserHeaders: 30,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 15
-}
-[PASCHA] Cache hit: true
-[DETECT] Resposta PASCHA: {
-  isBot: true,
-  score: 95,
-  confidence: 'very-high',
-  cached: true,
-  error: undefined
-}
-[189.45.67.123] Bot: true | Score: 95 | Cached: true
- POST /api/detect 200 in 183ms
-[DETECT] IP extraction debug: {
-  'x-forwarded-for': '81.107.120.100',
-  'cf-connecting-ip': undefined,
-  'socket.remoteAddress': '::1',
-  'final-ip': '81.107.120.100'
-}
-[DETECT] Enviando para PASCHA: {
-  ip: '81.107.120.100',
-  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...',
-  headers: {
-    'accept-language': 'en-US,en;q=0.9',
-    'accept-encoding': 'gzip, deflate, br',
-    referer: '',
-    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9',
-    connection: 'keep-alive',
-    'sec-ch-ua': ''
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA_CLIENT] Request body being sent: {
-  "ip": "81.107.120.100",
-  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Safari/537.36",
-  "headers": {
-    "accept-language": "en-US,en;q=0.9",
-    "accept-encoding": "gzip, deflate, br",
-    "referer": "",
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9",
-    "connection": "keep-alive",
-    "sec-ch-ua": ""
-  },
-  "geo": {
-    "country": "unknown"
-  }
-}
-[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
-[PASCHA_CLIENT] API Key present: true
-[PASCHA_CLIENT] Raw response from PASCHA: {
-  "success": true,
-  "cached": false,
-  "isBot": false,
-  "score": 0,
-  "scoreBreakdown": {
-    "botSignature": 0,
-    "browserHeaders": 0,
-    "tlsFingerprint": 0,
-    "proxyDetection": 0,
-    "encodingHeaders": 0
-  },
-  "confidence": "very-low",
-  "recommendation": "oferta",
-  "details": {
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Safari/537.36",
-    "country": "unknown",
-    "tlsAnalysis": {
-      "tlsScore": -15,
-      "tlsVersion": "unknown",
-      "cipherCount": 1,
-      "hasExtensions": false,
-      "isHeadless": false
-    }
-  },
-  "timestamp": "2026-05-22T01:10:20.266Z"
-}
-[PASCHA] Score breakdown: {
-  botSignature: 0,
-  browserHeaders: 0,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 0
-}
-[PASCHA] Cache hit: false
-[DETECT] Resposta PASCHA: {
-  isBot: false,
-  score: 0,
-  confidence: 'very-low',
-  cached: false,
-  error: undefined
-}
-[81.107.120.100] Bot: false | Score: 0 | Cached: false
- POST /api/detect 200 in 183ms
+ ⨯ Failed to start server
+Error: listen EADDRINUSE: address already in use :::3005
+    at Server.setupListenHandle [as _listen2] (node:net:1948:16)
+    at listenInCluster (node:net:2005:12)
+    at Server.listen (node:net:2110:7)
+    at C:\Users\Vinicios\Desktop\cloacker-pascha-example\node_modules\next\dist\server\lib\start-server.js:280:16
+    at new Promise (<anonymous>)
+    at startServer (C:\Users\Vinicios\Desktop\cloacker-pascha-example\node_modules\next\dist\server\lib\start-server.js:191:11)
+    at C:\Users\Vinicios\Desktop\cloacker-pascha-example\node_modules\next\dist\server\lib\start-ser ✓ Compiled /api/detect in 73ms (67 modules)
 [DETECT] IP extraction debug: {
   'x-forwarded-for': '::1',
-  'cf-connecting-ip': undefined,
+  'cf-connecting-ip': '',
   'socket.remoteAddress': '::1',
   'final-ip': '::1'
 }
@@ -635,10 +21,10 @@
   ip: '::1',
   userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
   headers: {
-    'accept-language': 'pt-BR,pt;q=0.9',
-    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
     referer: '',
-    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    accept: '*/*',
     connection: 'keep-alive',
     'sec-ch-ua': ''
   },
@@ -648,222 +34,8 @@
   "ip": "::1",
   "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
   "headers": {
-    "accept-language": "pt-BR,pt;q=0.9",
-    "accept-encoding": "gzip, deflate, br, zstd",
-    "referer": "",
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-    "connection": "keep-alive",
-    "sec-ch-ua": ""
-  },
-  "geo": {
-    "country": "unknown"
-  }
-}
-[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
-[PASCHA_CLIENT] API Key present: true
-[PASCHA_CLIENT] Raw response from PASCHA: {
-  "success": true,
-  "cached": true,
-  "cacheAge": 3326344,
-  "isBot": false,
-  "score": 0,
-  "scoreBreakdown": {
-    "botSignature": 0,
-    "browserHeaders": 0,
-    "tlsFingerprint": 0,
-    "proxyDetection": 0,
-    "encodingHeaders": 0
-  },
-  "confidence": "very-low",
-  "recommendation": "oferta",
-  "timestamp": "2026-05-22T00:22:19.319Z"
-}
-[PASCHA] Score breakdown: {
-  botSignature: 0,
-  browserHeaders: 0,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 0
-}
-[PASCHA] Cache hit: true
-[DETECT] Resposta PASCHA: {
-  isBot: false,
-  score: 0,
-  confidence: 'very-low',
-  cached: true,
-  error: undefined
-}
-[::1] Bot: false | Score: 0 | Cached: true
- GET /api/detect 200 in 609ms
-[DETECT] IP extraction debug: {
-  'x-forwarded-for': '::1',
-  'cf-connecting-ip': undefined,
-  'socket.remoteAddress': '::1',
-  'final-ip': '::1'
-}
-[DETECT] Enviando para PASCHA: {
-  ip: '::1',
-  userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://ww...',
-  headers: {
-    'accept-language': 'pt-BR,pt;q=0.9',
-    'accept-encoding': 'gzip, deflate, br, zstd',
-    referer: '',
-    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    connection: 'keep-alive',
-    'sec-ch-ua': ''
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA_CLIENT] Request body being sent: {
-  "ip": "::1",
-  "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
-  "headers": {
-    "accept-language": "pt-BR,pt;q=0.9",
-    "accept-encoding": "gzip, deflate, br, zstd",
-    "referer": "",
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-    "connection": "keep-alive",
-    "sec-ch-ua": ""
-  },
-  "geo": {
-    "country": "unknown"
-  }
-}
-[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
-[PASCHA_CLIENT] API Key present: true
-[PASCHA_CLIENT] Raw response from PASCHA: {
-  "success": true,
-  "cached": true,
-  "cacheAge": 3328137,
-  "isBot": false,
-  "score": 0,
-  "scoreBreakdown": {
-    "botSignature": 0,
-    "browserHeaders": 0,
-    "tlsFingerprint": 0,
-    "proxyDetection": 0,
-    "encodingHeaders": 0
-  },
-  "confidence": "very-low",
-  "recommendation": "oferta",
-  "timestamp": "2026-05-22T00:22:19.319Z"
-}
-[PASCHA] Score breakdown: {
-  botSignature: 0,
-  browserHeaders: 0,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 0
-}
-[PASCHA] Cache hit: true
-[DETECT] Resposta PASCHA: {
-  isBot: false,
-  score: 0,
-  confidence: 'very-low',
-  cached: true,
-  error: undefined
-}
-[::1] Bot: false | Score: 0 | Cached: true
- GET /api/detect 200 in 186ms
-[DETECT] IP extraction debug: {
-  'x-forwarded-for': '::1',
-  'cf-connecting-ip': undefined,
-  'socket.remoteAddress': '::1',
-  'final-ip': '::1'
-}
-[DETECT] Enviando para PASCHA: {
-  ip: '::1',
-  userAgent: 'curl/7.64.1...',
-  headers: {
-    'accept-language': 'pt-BR,pt;q=0.9',
-    'accept-encoding': 'gzip, deflate, br, zstd',
-    referer: '',
-    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    connection: 'keep-alive',
-    'sec-ch-ua': ''
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA_CLIENT] Request body being sent: {
-  "ip": "::1",
-  "userAgent": "curl/7.64.1",
-  "headers": {
-    "accept-language": "pt-BR,pt;q=0.9",
-    "accept-encoding": "gzip, deflate, br, zstd",
-    "referer": "",
-    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-    "connection": "keep-alive",
-    "sec-ch-ua": ""
-  },
-  "geo": {
-    "country": "unknown"
-  }
-}
-[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
-[PASCHA_CLIENT] API Key present: true
-[PASCHA_CLIENT] Raw response from PASCHA: {
-  "success": true,
-  "cached": true,
-  "cacheAge": 3329760,
-  "isBot": false,
-  "score": 0,
-  "scoreBreakdown": {
-    "botSignature": 0,
-    "browserHeaders": 0,
-    "tlsFingerprint": 0,
-    "proxyDetection": 0,
-    "encodingHeaders": 0
-  },
-  "confidence": "very-low",
-  "recommendation": "oferta",
-  "timestamp": "2026-05-22T00:22:19.319Z"
-}
-[PASCHA] Score breakdown: {
-  botSignature: 0,
-  browserHeaders: 0,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 0
-}
-[PASCHA] Cache hit: true
-[DETECT] Resposta PASCHA: {
-  isBot: false,
-  score: 0,
-  confidence: 'very-low',
-  cached: true,
-  error: undefined
-}
-[::1] Bot: false | Score: 0 | Cached: true
- GET /api/detect 200 in 186ms
- ○ Compiling / ...
- ✓ Compiled / in 523ms (263 modules)
- GET / 200 in 609ms
- ✓ Compiled /api/detect in 38ms (67 modules)
-[DETECT] IP extraction debug: {
-  'x-forwarded-for': '::1',
-  'cf-connecting-ip': undefined,
-  'socket.remoteAddress': '::1',
-  'final-ip': '::1'
-}
-[DETECT] Enviando para PASCHA: {
-  ip: '::1',
-  userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://ww...',
-  headers: {
-    'accept-language': 'pt-BR,pt;q=0.9',
-    'accept-encoding': 'gzip, deflate, br, zstd',
-    referer: '',
-    accept: '*/*',
-    connection: 'keep-alive',
-    'sec-ch-ua': ''
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA_CLIENT] Request body being sent: {
-  "ip": "::1",
-  "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
-  "headers": {
-    "accept-language": "pt-BR,pt;q=0.9",
-    "accept-encoding": "gzip, deflate, br, zstd",
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
     "referer": "",
     "accept": "*/*",
     "connection": "keep-alive",
@@ -875,60 +47,25 @@
 }
 [PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
 [PASCHA_CLIENT] API Key present: true
-[DETECT] IP extraction debug: {
-  'x-forwarded-for': '::1',
-  'cf-connecting-ip': undefined,
-  'socket.remoteAddress': '::1',
-  'final-ip': '::1'
-}
-[DETECT] Enviando para PASCHA: {
-  ip: '::1',
-  userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://ww...',
-  headers: {
-    'accept-language': 'pt-BR,pt;q=0.9',
-    'accept-encoding': 'gzip, deflate, br, zstd',
-    referer: '',
-    accept: '*/*',
-    connection: 'keep-alive',
-    'sec-ch-ua': ''
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA_CLIENT] Request body being sent: {
-  "ip": "::1",
-  "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
-  "headers": {
-    "accept-language": "pt-BR,pt;q=0.9",
-    "accept-encoding": "gzip, deflate, br, zstd",
-    "referer": "",
-    "accept": "*/*",
-    "connection": "keep-alive",
-    "sec-ch-ua": ""
-  },
-  "geo": {
-    "country": "unknown"
-  }
-}
-[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
-[PASCHA_CLIENT] API Key present: true
- POST /api/detect 200 in 112ms
- POST /api/detect 200 in 119ms
 [PASCHA_CLIENT] Raw response from PASCHA: {
   "success": true,
   "cached": false,
   "isBot": true,
   "score": 50,
   "scoreBreakdown": {
-    "botSignature": 50,
+    "botSignature": 0,
     "browserHeaders": 0,
     "tlsFingerprint": 0,
     "proxyDetection": 0,
-    "encodingHeaders": 0
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
   },
   "confidence": "medium",
   "recommendation": "safe",
   "details": {
-    "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.12",
     "country": "unknown",
     "tlsAnalysis": {
       "tlsScore": -15,
@@ -938,14 +75,17 @@
       "isHeadless": false
     }
   },
-  "timestamp": "2026-05-22T01:23:38.627Z"
+  "timestamp": "2026-05-22T03:00:47.081Z"
 }
 [PASCHA] Score breakdown: {
-  botSignature: 50,
+  botSignature: 0,
   browserHeaders: 0,
   tlsFingerprint: 0,
   proxyDetection: 0,
-  encodingHeaders: 0
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
 }
 [PASCHA] Cache hit: false
 [DETECT] Resposta PASCHA: {
@@ -956,52 +96,23 @@
   error: undefined
 }
 [::1] Bot: true | Score: 50 | Cached: false
-[PASCHA_CLIENT] Raw response from PASCHA: {
-  "success": true,
-  "cached": true,
-  "cacheAge": 3,
-  "isBot": true,
-  "score": 50,
-  "scoreBreakdown": {
-    "botSignature": 50,
-    "browserHeaders": 0,
-    "tlsFingerprint": 0,
-    "proxyDetection": 0,
-    "encodingHeaders": 0
-  },
-  "confidence": "medium",
-  "recommendation": "safe",
-  "timestamp": "2026-05-22T01:23:38.627Z"
-}
-[PASCHA] Score breakdown: {
-  botSignature: 50,
-  browserHeaders: 0,
-  tlsFingerprint: 0,
-  proxyDetection: 0,
-  encodingHeaders: 0
-}
-[PASCHA] Cache hit: true
-[DETECT] Resposta PASCHA: {
-  isBot: true,
-  score: 50,
-  confidence: 'medium',
-  cached: true,
-  error: undefined
-}
-[::1] Bot: true | Score: 50 | Cached: true
- GET / 200 in 30ms
+ POST /api/detect 200 in 755ms
+ GET / 200 in 783ms
+ ✓ Compiled /_error in 64ms (278 modules)
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 93ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
 [DETECT] IP extraction debug: {
   'x-forwarded-for': '::1',
-  'cf-connecting-ip': undefined,
+  'cf-connecting-ip': '',
   'socket.remoteAddress': '::1',
   'final-ip': '::1'
 }
 [DETECT] Enviando para PASCHA: {
   ip: '::1',
-  userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://ww...',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
   headers: {
-    'accept-language': 'pt-BR,pt;q=0.9',
-    'accept-encoding': 'gzip, deflate, br, zstd',
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
     referer: '',
     accept: '*/*',
     connection: 'keep-alive',
@@ -1011,46 +122,10 @@
 }
 [PASCHA_CLIENT] Request body being sent: {
   "ip": "::1",
-  "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
   "headers": {
-    "accept-language": "pt-BR,pt;q=0.9",
-    "accept-encoding": "gzip, deflate, br, zstd",
-    "referer": "",
-    "accept": "*/*",
-    "connection": "keep-alive",
-    "sec-ch-ua": ""
-  },
-  "geo": {
-    "country": "unknown"
-  }
-}
-[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
-[PASCHA_CLIENT] API Key present: true
-[DETECT] IP extraction debug: {
-  'x-forwarded-for': '::1',
-  'cf-connecting-ip': undefined,
-  'socket.remoteAddress': '::1',
-  'final-ip': '::1'
-}
-[DETECT] Enviando para PASCHA: {
-  ip: '::1',
-  userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://ww...',
-  headers: {
-    'accept-language': 'pt-BR,pt;q=0.9',
-    'accept-encoding': 'gzip, deflate, br, zstd',
-    referer: '',
-    accept: '*/*',
-    connection: 'keep-alive',
-    'sec-ch-ua': ''
-  },
-  geo: { country: 'unknown' }
-}
-[PASCHA_CLIENT] Request body being sent: {
-  "ip": "::1",
-  "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
-  "headers": {
-    "accept-language": "pt-BR,pt;q=0.9",
-    "accept-encoding": "gzip, deflate, br, zstd",
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
     "referer": "",
     "accept": "*/*",
     "connection": "keep-alive",
@@ -1065,26 +140,32 @@
 [PASCHA_CLIENT] Raw response from PASCHA: {
   "success": true,
   "cached": true,
-  "cacheAge": 25975,
+  "cacheAge": 577,
   "isBot": true,
   "score": 50,
   "scoreBreakdown": {
-    "botSignature": 50,
+    "botSignature": 0,
     "browserHeaders": 0,
     "tlsFingerprint": 0,
     "proxyDetection": 0,
-    "encodingHeaders": 0
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
   },
   "confidence": "medium",
   "recommendation": "safe",
-  "timestamp": "2026-05-22T01:23:38.627Z"
+  "timestamp": "2026-05-22T03:00:47.081Z"
 }
 [PASCHA] Score breakdown: {
-  botSignature: 50,
+  botSignature: 0,
   browserHeaders: 0,
   tlsFingerprint: 0,
   proxyDetection: 0,
-  encodingHeaders: 0
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
 }
 [PASCHA] Cache hit: true
 [DETECT] Resposta PASCHA: {
@@ -1095,30 +176,75 @@
   error: undefined
 }
 [::1] Bot: true | Score: 50 | Cached: true
- POST /api/detect 200 in 612ms
+ POST /api/detect 200 in 192ms
+ GET / 200 in 216ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
 [PASCHA_CLIENT] Raw response from PASCHA: {
   "success": true,
   "cached": true,
-  "cacheAge": 25977,
+  "cacheAge": 933,
   "isBot": true,
   "score": 50,
   "scoreBreakdown": {
-    "botSignature": 50,
+    "botSignature": 0,
     "browserHeaders": 0,
     "tlsFingerprint": 0,
     "proxyDetection": 0,
-    "encodingHeaders": 0
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
   },
   "confidence": "medium",
   "recommendation": "safe",
-  "timestamp": "2026-05-22T01:23:38.627Z"
+  "timestamp": "2026-05-22T03:00:47.081Z"
 }
 [PASCHA] Score breakdown: {
-  botSignature: 50,
+  botSignature: 0,
   browserHeaders: 0,
   tlsFingerprint: 0,
   proxyDetection: 0,
-  encodingHeaders: 0
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
 }
 [PASCHA] Cache hit: true
 [DETECT] Resposta PASCHA: {
@@ -1129,5 +255,4983 @@
   error: undefined
 }
 [::1] Bot: true | Score: 50 | Cached: true
- POST /api/detect 200 in 608ms
- ✓ Compiled in 62ms (251 modules)
+ POST /api/detect 200 in 193ms
+ GET / 200 in 208ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 8ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 1502,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 197ms
+ GET / 200 in 215ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 1911,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 195ms
+ GET / 200 in 209ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 2269,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 191ms
+ GET / 200 in 214ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 7ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 2614,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 195ms
+ GET / 200 in 204ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 6ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 2962,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 190ms
+ GET / 200 in 211ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 8ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 3320,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 191ms
+ GET / 200 in 201ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 3673,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 191ms
+ GET / 200 in 210ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 4016,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 199ms
+ GET / 200 in 209ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 7ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 4402,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 198ms
+ GET / 200 in 228ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 4754,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 193ms
+ GET / 200 in 215ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 5109,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 188ms
+ GET / 200 in 209ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 5440,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 189ms
+ GET / 200 in 200ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 5792,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 188ms
+ GET / 200 in 211ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 7ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 6154,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 191ms
+ GET / 200 in 202ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 3ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 6511,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 188ms
+ GET / 200 in 210ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 9ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 6893,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 196ms
+ GET / 200 in 234ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 7227,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 189ms
+ GET / 200 in 198ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 6ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 7566,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 189ms
+ GET / 200 in 198ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 7932,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 203ms
+ GET / 200 in 225ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 3ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 8265,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 188ms
+ GET / 200 in 196ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 8607,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 190ms
+ GET / 200 in 199ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 9ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 8980,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 191ms
+ GET / 200 in 205ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 7ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 9343,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 192ms
+ GET / 200 in 207ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 7ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 9689,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 189ms
+ GET / 200 in 198ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 10051,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 190ms
+ GET / 200 in 203ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 10397,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 189ms
+ GET / 200 in 209ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 10753,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 189ms
+ GET / 200 in 210ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 11109,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 191ms
+ GET / 200 in 210ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 11452,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 193ms
+ GET / 200 in 203ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 11800,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 190ms
+ GET / 200 in 199ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 12143,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 191ms
+ GET / 200 in 200ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 3ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 12474,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 191ms
+ GET / 200 in 199ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 12820,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 190ms
+ GET / 200 in 199ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 10ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 13198,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 191ms
+ GET / 200 in 230ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 13576,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 192ms
+ GET / 200 in 201ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 12ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 13997,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 200ms
+ GET / 200 in 215ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 11ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 200 in 6ms
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 40095,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 636ms
+ GET / 200 in 651ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 6ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 40591,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 205ms
+ GET / 200 in 214ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 40955,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 198ms
+ GET / 200 in 207ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 41306,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 196ms
+ GET / 200 in 204ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 6ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 41649,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 196ms
+ GET / 200 in 206ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 42014,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 195ms
+ GET / 200 in 215ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 42366,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 206ms
+ GET / 200 in 214ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 42713,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 204ms
+ GET / 200 in 214ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 10ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 43084,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 196ms
+ GET / 200 in 207ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 43440,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 196ms
+ GET / 200 in 218ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 9ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 43824,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 203ms
+ GET / 200 in 219ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 44191,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 198ms
+ GET / 200 in 209ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 6ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 44545,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 202ms
+ GET / 200 in 214ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 6ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 44912,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 204ms
+ GET / 200 in 214ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 6ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 45304,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 197ms
+ GET / 200 in 213ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 45657,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 196ms
+ GET / 200 in 215ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 7ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 46025,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 198ms
+ GET / 200 in 217ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 7ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 46396,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 197ms
+ GET / 200 in 227ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 46753,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 200ms
+ GET / 200 in 218ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 6ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 47112,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 194ms
+ GET / 200 in 208ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 47459,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 200ms
+ GET / 200 in 214ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 47832,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 195ms
+ GET / 200 in 213ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 6ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 48180,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 196ms
+ GET / 200 in 204ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 5ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 48537,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 197ms
+ GET / 200 in 213ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 48875,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 194ms
+ GET / 200 in 201ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 11ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 49237,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 196ms
+ GET / 200 in 209ms
+ GET /_next/static/webpack/ed332ebd94fbaa0a.webpack.hot-update.json 404 in 4ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': '',
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': '*',
+    'accept-encoding': 'gzip, deflate',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "*",
+    "accept-encoding": "gzip, deflate",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+ GET / 200 in 38ms
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 49610,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0,
+    "headerCoherence": 15,
+    "behaviorScore": 20,
+    "canvasScore": 15
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T03:00:47.081Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0,
+  headerCoherence: 15,
+  behaviorScore: 20,
+  canvasScore: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 197ms

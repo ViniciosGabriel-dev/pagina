@@ -1,197 +1,10 @@
 import { useState } from 'react';
 import Head from 'next/head';
 
-const BOT_SIGNATURES = ['googlebot','bingbot','slurp','duckduckbot','baiduspider','yandexbot','facebookexternalhit','twitterbot','whatsapp','linkedinbot','chrome-lighthouse','pagespeedonline','gtmetrix','perf.tools','curl','wget','python','java','node','postman','insomnia'];
-
-function isKnownBot(userAgent) {
-  const ua = userAgent.toLowerCase();
-  return BOT_SIGNATURES.some(sig => ua.includes(sig));
-}
-
-export async function getServerSideProps(context) {
-  const cloakingEnabled = process.env.CLOAKING_ENABLED === 'true';
-  const userAgent = context.req.headers['user-agent'] || '';
-  const whatsappPhone = String(process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '551421088000').trim();
-
-  // Phase 1: Cloaking disabled - all visitors see landing page
-  if (!cloakingEnabled) {
-    return {
-      props: {
-        showLandingPage: true,
-        cloakingEnabled: false,
-        whatsappPhone,
-      },
-    };
-  }
-
-  // Phase 2: Cloaking enabled - detect if bot
-  if (isKnownBot(userAgent)) {
-    return {
-      props: {
-        showLandingPage: true,
-        cloakingEnabled: true,
-        whatsappPhone,
-      },
-    };
-  }
-
-  // If not a known bot, call PASCHA API for advanced detection
-  try {
-    const protocol = context.req.headers['x-forwarded-proto'] || 'http';
-    const host = context.req.headers['x-forwarded-host'] || context.req.headers.host;
-    const apiUrl = `${protocol}://${host}/api/detect`;
-
-    const response = await fetch(apiUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'User-Agent': userAgent,
-        'x-forwarded-for': context.req.headers['x-forwarded-for'] || context.req.socket.remoteAddress || '',
-        'cf-connecting-ip': context.req.headers['cf-connecting-ip'] || '',
-      },
-      body: JSON.stringify({
-        behaviorData: null,
-        canvasFingerprint: null,
-      }),
-    });
-
-    const detection = await response.json();
-    // Only trust isBot if confidence is high, otherwise use score threshold
-    const isBot = (detection.confidence === 'high' && detection.isBot) || (detection.score > 60);
-
-    return {
-      props: {
-        showLandingPage: isBot,
-        cloakingEnabled: true,
-        whatsappPhone,
-        score: detection.score || 0,
-      },
-    };
-  } catch (error) {
-    console.error('[SSR] Error calling PASCHA:', error);
-    return {
-      props: {
-        showLandingPage: false,
-        cloakingEnabled: true,
-        whatsappPhone,
-        score: 0,
-      },
-    };
-  }
-}
-
-export default function Home({ showLandingPage, whatsappPhone = '551421088000' }) {
-  // Renderiza página de vendas quando showLandingPage = false
-  if (!showLandingPage) {
-    return (
-      <div style={{ fontFamily: "'Montserrat', Arial, sans-serif", color: '#333', margin: 0, padding: 0, backgroundColor: '#fff' }}>
-        <Head>
-          <meta name="robots" content="noindex, nofollow" />
-          <title>Resolva suas Dívidas</title>
-        </Head>
-        <style dangerouslySetInnerHTML={{ __html: `
-          * { box-sizing: border-box; }
-          body { margin: 0; padding: 0; }
-          .sales-header { background: linear-gradient(135deg, #0051FA 0%, #003cb5 100%); color: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
-          .sales-header h1 { margin: 0; font-size: 24px; font-weight: bold; }
-          .sales-cta { background: #25D366; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; cursor: pointer; }
-          .sales-hero { background: linear-gradient(135deg, #0051FA 0%, #003cb5 100%); color: white; padding: 80px 40px; text-align: center; }
-          .sales-hero h2 { font-size: 48px; margin: 0 0 20px 0; font-weight: bold; }
-          .sales-hero p { font-size: 20px; margin: 0 0 40px 0; }
-          .sales-hero-cta { background: #25D366; color: white; padding: 18px 48px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; display: inline-block; }
-          .sales-hero-cta:hover { background: #20BA5C; }
-          .sales-services { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
-          .sales-services h3 { font-size: 36px; text-align: center; margin-bottom: 50px; }
-          .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
-          .service-card { background: #f5f5f5; padding: 30px; border-radius: 8px; text-align: center; }
-          .service-card h4 { font-size: 20px; margin: 0 0 10px 0; font-weight: bold; color: #0051FA; }
-          .service-card p { font-size: 14px; color: #666; margin: 0; }
-          .sales-testimonials { background: #f0f0f0; padding: 80px 40px; }
-          .testimonials-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-          .testimonial { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-          .testimonial p { font-size: 14px; color: #666; margin: 0 0 10px 0; font-style: italic; }
-          .testimonial-author { font-weight: bold; color: #0051FA; }
-          .sales-footer { background: #333; color: white; padding: 40px; text-align: center; }
-          .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 30px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); z-index: 999; animation: pulse 2s infinite; }
-          @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
-          .whatsapp-float:hover { transform: scale(1.15); }
-          @media (max-width: 768px) {
-            .services-grid { grid-template-columns: repeat(2, 1fr); }
-            .testimonials-grid { grid-template-columns: 1fr; }
-            .sales-header { flex-direction: column; gap: 10px; }
-            .sales-hero h2 { font-size: 32px; }
-            .sales-hero p { font-size: 16px; }
-          }
-        ` }} />
-
-        <div className="sales-header">
-          <h1>🔐 Resolva Suas Dívidas</h1>
-          <a href={`https://api.whatsapp.com/send/?phone=${whatsappPhone}`} target="_blank" rel="noreferrer" className="sales-cta">
-            💬 Fale Conosco
-          </a>
-        </div>
-
-        <div className="sales-hero">
-          <h2>Tem Dívidas? Resolva Agora!</h2>
-          <p>Estamos aqui para ajudar você a sair dessa situação</p>
-          <a href={`https://api.whatsapp.com/send/?phone=${whatsappPhone}`} target="_blank" rel="noreferrer" className="sales-hero-cta">
-            ✨ Conversar Agora via WhatsApp
-          </a>
-        </div>
-
-        <div className="sales-services">
-          <h3>Nossos Serviços</h3>
-          <div className="services-grid">
-            <div className="service-card">
-              <h4>Renegociação</h4>
-              <p>Negocie suas dívidas com melhores condições</p>
-            </div>
-            <div className="service-card">
-              <h4>Dívidas Prescritas</h4>
-              <p>Verifique se sua dívida já prescreveu</p>
-            </div>
-            <div className="service-card">
-              <h4>Defesa de Execuções</h4>
-              <p>Proteja seus bens em processos judiciais</p>
-            </div>
-            <div className="service-card">
-              <h4>Revisão de Contratos</h4>
-              <p>Analise cláusulas abusivas em seus contratos</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="sales-testimonials">
-          <div className="testimonials-grid">
-            <div className="testimonial">
-              <p>"Resolveram meu problema em questão de dias! Muito bom mesmo."</p>
-              <div className="testimonial-author">👤 João Silva</div>
-            </div>
-            <div className="testimonial">
-              <p>"Equipe muito profissional, recomendo a todos!"</p>
-              <div className="testimonial-author">👤 Maria Santos</div>
-            </div>
-            <div className="testimonial">
-              <p>"Melhor decisão que tomei. Voltei a dormir tranquilo."</p>
-              <div className="testimonial-author">👤 Pedro Costa</div>
-            </div>
-          </div>
-        </div>
-
-        <div className="sales-footer">
-          <p>© 2024 - Todos os direitos reservados</p>
-        </div>
-
-        <a href={`https://api.whatsapp.com/send/?phone=${whatsappPhone}`} target="_blank" rel="noreferrer" className="whatsapp-float">
-          💬
-        </a>
-      </div>
-    );
-  }
-
-  // Renderiza landing page quando showLandingPage = true
+export default function Home() {
   const [faqOpen, setFaqOpen] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
+  const whatsappPhone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '551421088000';
 
   const faqs = [
     {
@@ -239,14 +52,13 @@ export default function Home({ showLandingPage, whatsappPhone = '551421088000' }
   return (
     <div suppressHydrationWarning style={{ fontFamily: "'Montserrat', Arial, sans-serif", color: '#333', margin: 0, padding: 0, backgroundColor: '#fff' }}>
       <Head>
-        <meta name="robots" content={showLandingPage ? "index, follow" : "noindex, nofollow"} />
+        <meta name="robots" content="noindex, nofollow" />
         <meta name="referrer" content="no-referrer" />
-        <meta name="googlebot" content={showLandingPage ? "index, follow" : "noindex, nofollow"} />
+        <meta name="googlebot" content="noindex, nofollow" />
         <meta httpEquiv="x-ua-compatible" content="IE=edge" />
         <meta httpEquiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
-        <title>{showLandingPage ? 'Paschoalotto' : 'Resolva suas Dívidas'}</title>
       </Head>
       <style dangerouslySetInnerHTML={{ __html: `
         * { box-sizing: border-box; }
@@ -390,6 +202,7 @@ export default function Home({ showLandingPage, whatsappPhone = '551421088000' }
         }
       ` }} />
 
+      {/* Modal de Fraude */}
       {modalVisible && (
         <div style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 9999, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div className="modal-dialog" style={{ backgroundColor: '#fff', borderRadius: '12px', maxWidth: '480px', width: '90%', overflow: 'hidden', boxShadow: '0 20px 60px rgba(0,0,0,0.3)' }}>
@@ -413,12 +226,14 @@ export default function Home({ showLandingPage, whatsappPhone = '551421088000' }
         </div>
       )}
 
+      {/* Banner topo */}
       <div className="banner" style={{ backgroundColor: '#0051FA', color: '#fff', padding: '10px 20px', fontSize: '14px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px', position: 'relative' }}>
         <a href={`https://api.whatsapp.com/send/?phone=${whatsappPhone}`} target="_blank" rel="noreferrer" style={{ color: '#fff', textDecoration: 'underline' }}>
           Recebeu uma ligação indevida da Paschoalotto? Fale com nosso suporte oficial clicando aqui
         </a>
       </div>
 
+      {/* Header */}
       <header className="header" style={{ backgroundColor: '#fff', borderBottom: '1px solid #e0e0e0', padding: '14px 0', position: 'sticky', top: 0, zIndex: 100 }}>
         <div className="header-content" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <img src="/imagens/logo.png" alt="Paschoalotto" style={{ height: '40px' }} />
@@ -436,6 +251,7 @@ export default function Home({ showLandingPage, whatsappPhone = '551421088000' }
         </div>
       </header>
 
+      {/* Hero */}
       <section className="hero-section" style={{ position: 'relative', minHeight: '420px', display: 'flex', alignItems: 'center', overflow: 'hidden' }}>
         <img src="/imagens/banner-desktop.webp" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(0,0,0,0.75) 50%, rgba(0,0,0,0.1) 100%)' }} />
@@ -452,6 +268,7 @@ export default function Home({ showLandingPage, whatsappPhone = '551421088000' }
         </div>
       </section>
 
+      {/* Soluções */}
       <section className="solutions-section" style={{ padding: '80px 40px', backgroundColor: '#fff' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
           <h2 className="solutions-title" style={{ fontSize: '34px', color: '#0051FA', marginBottom: '50px', fontWeight: 'bold', lineHeight: '1.3' }}>
@@ -473,6 +290,7 @@ export default function Home({ showLandingPage, whatsappPhone = '551421088000' }
         </div>
       </section>
 
+      {/* Paschoalover */}
       <section className="paschoalover-section" style={{ padding: '70px 40px', backgroundColor: '#fff' }}>
         <div className="paschoalover-container" style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
           <div>
@@ -493,6 +311,7 @@ export default function Home({ showLandingPage, whatsappPhone = '551421088000' }
         </div>
       </section>
 
+      {/* FAQ */}
       <section className="faq-section" style={{ padding: '80px 40px', backgroundColor: '#fff' }}>
         <div className="faq-container" style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '280px 1fr', gap: '80px' }}>
           <div>
@@ -522,6 +341,7 @@ export default function Home({ showLandingPage, whatsappPhone = '551421088000' }
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="footer" style={{ backgroundColor: '#f5f5f5', padding: '60px 40px' }}>
         <div className="footer-container" style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '220px 1fr 200px', gap: '60px' }}>
           <div>
@@ -555,17 +375,17 @@ export default function Home({ showLandingPage, whatsappPhone = '551421088000' }
           <div>
             <p style={{ fontWeight: 'bold', marginBottom: '15px', fontSize: '14px' }}>Ajuda</p>
             {[
-              'Política de Privacidade e Proteção de Dados',
-              'Política de Segurança da Informação',
-              'Relatório de Transparência e Igualdade Salarial',
-              'Código de Ética e Conduta',
-              'Relação com Investidor',
-              'Política de Cookies',
-              'Política De Integridade e Compliance',
-              'Portal do Titular de Dados',
-              'Portal de Preferência do Colaborador',
-              'Denuncie uma fraude',
-            ].map((label, i) => (
+              ['Política de Privacidade e Proteção de Dados', '/humano/privacidade'],
+              ['Política de Segurança da Informação', '/humano/seguranca'],
+              ['Relatório de Transparência e Igualdade Salarial', '/humano/transparencia'],
+              ['Código de Ética e Conduta', '/humano/etica'],
+              ['Relação com Investidor', '/humano/investidor'],
+              ['Política de Cookies', '/humano/cookies'],
+              ['Política De Integridade e Compliance', '/humano/compliance'],
+              ['Portal do Titular de Dados', '/humano/portal-dados'],
+              ['Portal de Preferência do Colaborador', '/humano/portal-colaborador'],
+              ['Denuncie uma fraude', '/humano/denuncie-fraude'],
+            ].map(([label], i) => (
               <div key={i} style={{ marginBottom: '10px' }}>
                 <span style={{ fontSize: '13px', color: '#555', textDecoration: 'none' }}>{label}</span>
               </div>
@@ -574,6 +394,7 @@ export default function Home({ showLandingPage, whatsappPhone = '551421088000' }
         </div>
       </footer>
 
+      {/* WhatsApp flutuante */}
       <a
         className="whatsapp-btn"
         href={`https://api.whatsapp.com/send/?phone=${whatsappPhone}`}

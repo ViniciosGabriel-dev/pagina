@@ -1,0 +1,106 @@
+
+> cloacker-pascha-integration@1.0.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3001
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1169ms
+ ○ Compiling / ...
+ ✓ Compiled / in 689ms (261 modules)
+[SSR] Cloaking enabled: false
+[PHASE 1] All visitors see landing page
+[HOME] Rendering with: { showLandingPage: true, cloakingEnabled: false }
+ GET / 200 in 783ms
+[SSR] Cloaking enabled: false
+[PHASE 1] All visitors see landing page
+[HOME] Rendering with: { showLandingPage: true, cloakingEnabled: false }
+ GET / 200 in 12ms
+   Reload env: .env.local
+ ✓ Compiled in 950ms (261 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: EPERM: operation not permitted, rename 'C:\Users\Vinicios\Desktop\cloacker-pascha-example\.next\cache\webpack\client-development\1.pack.gz_' -> 'C:\Users\Vinicios\Desktop\cloacker-pascha-example\.next\cache\webpack\client-development\1.pack.gz'
+ ✓ Compiled /_error in 130ms (263 modules)
+ GET / 404 in 164ms
+[SSR] Cloaking enabled: true
+[PHASE 2] Detection result: { isBot: true, score: 50 }
+[HOME] Rendering with: { showLandingPage: true, cloakingEnabled: true }
+ GET / 200 in 633ms
+[SSR] Cloaking enabled: true
+[PHASE 2] Detection result: { isBot: true, score: 50 }
+[HOME] Rendering with: { showLandingPage: true, cloakingEnabled: true }
+ GET / 200 in 616ms
+[SSR] Cloaking enabled: true
+[PHASE 2] Detection result: { isBot: true, score: 50 }
+[HOME] Rendering with: { showLandingPage: true, cloakingEnabled: true }
+ GET / 200 in 617ms
+ ✓ Compiled in 54ms (251 modules)
+ ✓ Compiled / in 96ms (261 modules)
+[SSR] Cloaking enabled: true
+[PHASE 2] Known bot detected: Mozilla/5.0 (compatible; Googlebot/2.1; +http://ww
+[HOME] Rendering with: { showLandingPage: true, cloakingEnabled: true }
+ GET / 200 in 125ms
+[SSR] Cloaking enabled: true
+[PHASE 2] Detection result: { isBot: true, score: 50 }
+[HOME] Rendering with: { showLandingPage: true, cloakingEnabled: true }
+ GET / 200 in 628ms
+[SSR] Cloaking enabled: true
+[PHASE 2] Detection result: { isBot: true, score: 50 }
+[HOME] Rendering with: { showLandingPage: true, cloakingEnabled: true }
+ GET / 200 in 640ms
+   Reload env: .env.local
+ ✓ Compiled in 69ms (261 modules)
+   Reload env: .env.local
+ ✓ Compiled in 131ms (261 modules)
+ ✓ Compiled in 263ms (261 modules)
+ ✓ Compiled in 197ms (261 modules)
+ ✓ Compiled in 196ms (261 modules)
+ ✓ Compiled in 235ms (261 modules)
+ ✓ Compiled in 136ms (261 modules)
+ ✓ Compiled in 110ms (261 modules)
+   Reload env: .env.local
+ ✓ Compiled in 96ms (261 modules)
+ ✓ Compiled in 205ms (261 modules)
+ ✓ Compiled in 201ms (261 modules)
+ ✓ Compiled in 181ms (261 modules)
+ ✓ Compiled in 138ms (261 modules)
+ ✓ Compiled in 114ms (261 modules)
+   Reload env: .env.local
+ ✓ Compiled in 79ms (261 modules)
+   Reload env: .env.local
+ ✓ Compiled in 87ms (261 modules)
+ ✓ Compiled in 264ms (261 modules)
+ ✓ Compiled in 325ms (261 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\Vinicios\Desktop\cloacker-pascha-example\.next\cache\webpack\server-development\1.pack.gz_' -> 'C:\Users\Vinicios\Desktop\cloacker-pascha-example\.next\cache\webpack\server-development\1.pack.gz'
+   Reload env: .env.local
+ ✓ Compiled in 175ms (261 modules)
+ ✓ Compiled in 164ms (261 modules)
+   Reload env: .env.local
+ ✓ Compiled in 2.1s (261 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\Vinicios\Desktop\cloacker-pascha-example\.next\cache\webpack\client-development\1.pack.gz_' -> 'C:\Users\Vinicios\Desktop\cloacker-pascha-example\.next\cache\webpack\client-development\1.pack.gz'
+   Reload env: .env.local
+ ✓ Compiled in 1050ms (261 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\Vinicios\Desktop\cloacker-pascha-example\.next\cache\webpack\client-development\0.pack.gz_' -> 'C:\Users\Vinicios\Desktop\cloacker-pascha-example\.next\cache\webpack\client-development\0.pack.gz'
+   Reload env: .env.local
+ ✓ Compiled in 72ms (261 modules)
+   Reload env: .env.local
+ ✓ Compiled in 91ms (261 modules)
+   Reload env: .env.local
+ ✓ Compiled in 123ms (261 modules)
+   Reload env: .env.local
+ ✓ Compiled in 111ms (261 modules)
+ ✓ Compiled in 717ms (261 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\Vinicios\Desktop\cloacker-pascha-example\.next\cache\webpack\client-development\1.pack.gz_' -> 'C:\Users\Vinicios\Desktop\cloacker-pascha-example\.next\cache\webpack\client-development\1.pack.gz'
+   Reload env: .env.local
+ ✓ Compiled in 160ms (261 modules)
+   Reload env: .env.local
+ ✓ Compiled in 241ms (261 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\Vinicios\Desktop\cloacker-pascha-example\.next\cache\webpack\server-development\4.pack.gz_' -> 'C:\Users\Vinicios\Desktop\cloacker-pascha-example\.next\cache\webpack\server-development\4.pack.gz'
+ ✓ Compiled in 377ms (261 modules)
+   Reload env: .env.local
+ ✓ Compiled in 114ms (261 modules)
+   Reload env: .env.local
+ ✓ Compiled in 194ms (261 modules)
+[?25h
