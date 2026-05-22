@@ -11,7 +11,7 @@ export default function Investidor() {
       }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 20px' }}>
           <a href="/" style={{ textDecoration: 'none' }}>
-            <img src="/imagens/logo.png" alt="Paschoalotto" style={{ height: 'clamp(40px, 10vw, 50px)', width: 'auto' }} />
+            <img src="/imagens/logo.png" alt="Paschoalott" style={{ height: 'clamp(40px, 10vw, 50px)', width: 'auto' }} />
           </a>
           <nav style={{ display: 'flex', gap: 'clamp(15px, 4vw, 30px)', fontSize: 'clamp(14px, 3vw, 16px)', alignItems: 'center' }}>
             <a href="/" style={{ color: '#666', textDecoration: 'none' }}>Voltar ao inicio</a>
