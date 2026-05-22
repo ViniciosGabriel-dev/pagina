@@ -625,3 +625,213 @@
 }
 [81.107.120.100] Bot: false | Score: 0 | Cached: false
  POST /api/detect 200 in 183ms
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': undefined,
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': 'pt-BR,pt;q=0.9',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    referer: '',
+    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "pt-BR,pt;q=0.9",
+    "accept-encoding": "gzip, deflate, br, zstd",
+    "referer": "",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 3326344,
+  "isBot": false,
+  "score": 0,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0
+  },
+  "confidence": "very-low",
+  "recommendation": "oferta",
+  "timestamp": "2026-05-22T00:22:19.319Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: false,
+  score: 0,
+  confidence: 'very-low',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: false | Score: 0 | Cached: true
+ GET /api/detect 200 in 609ms
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': undefined,
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://ww...',
+  headers: {
+    'accept-language': 'pt-BR,pt;q=0.9',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    referer: '',
+    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+  "headers": {
+    "accept-language": "pt-BR,pt;q=0.9",
+    "accept-encoding": "gzip, deflate, br, zstd",
+    "referer": "",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 3328137,
+  "isBot": false,
+  "score": 0,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0
+  },
+  "confidence": "very-low",
+  "recommendation": "oferta",
+  "timestamp": "2026-05-22T00:22:19.319Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: false,
+  score: 0,
+  confidence: 'very-low',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: false | Score: 0 | Cached: true
+ GET /api/detect 200 in 186ms
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '::1',
+  'cf-connecting-ip': undefined,
+  'socket.remoteAddress': '::1',
+  'final-ip': '::1'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'curl/7.64.1...',
+  headers: {
+    'accept-language': 'pt-BR,pt;q=0.9',
+    'accept-encoding': 'gzip, deflate, br, zstd',
+    referer: '',
+    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "curl/7.64.1",
+  "headers": {
+    "accept-language": "pt-BR,pt;q=0.9",
+    "accept-encoding": "gzip, deflate, br, zstd",
+    "referer": "",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 3329760,
+  "isBot": false,
+  "score": 0,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0
+  },
+  "confidence": "very-low",
+  "recommendation": "oferta",
+  "timestamp": "2026-05-22T00:22:19.319Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: false,
+  score: 0,
+  confidence: 'very-low',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: false | Score: 0 | Cached: true
+ GET /api/detect 200 in 186ms
