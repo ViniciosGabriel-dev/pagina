@@ -37,7 +37,7 @@ export async function getServerSideProps(context) {
   // If not a known bot, call PASCHA API for advanced detection
   try {
     const protocol = context.req.headers['x-forwarded-proto'] || 'http';
-    const host = context.req.headers['x-forwarded-host'] || context.req.headers.host || 'localhost:3000';
+    const host = context.req.headers['x-forwarded-host'] || context.req.headers.host;
     const apiUrl = `${protocol}://${host}/api/detect`;
 
     const response = await fetch(apiUrl, {
@@ -79,6 +79,115 @@ export async function getServerSideProps(context) {
 }
 
 export default function Home({ showLandingPage, whatsappPhone }) {
+  // Renderiza página de vendas quando showLandingPage = false
+  if (!showLandingPage) {
+    return (
+      <div style={{ fontFamily: "'Montserrat', Arial, sans-serif", color: '#333', margin: 0, padding: 0, backgroundColor: '#fff' }}>
+        <Head>
+          <meta name="robots" content="noindex, nofollow" />
+          <title>Resolva suas Dívidas</title>
+        </Head>
+        <style dangerouslySetInnerHTML={{ __html: `
+          * { box-sizing: border-box; }
+          body { margin: 0; padding: 0; }
+          .sales-header { background: linear-gradient(135deg, #0051FA 0%, #003cb5 100%); color: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+          .sales-header h1 { margin: 0; font-size: 24px; font-weight: bold; }
+          .sales-cta { background: #25D366; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold; cursor: pointer; }
+          .sales-hero { background: linear-gradient(135deg, #0051FA 0%, #003cb5 100%); color: white; padding: 80px 40px; text-align: center; }
+          .sales-hero h2 { font-size: 48px; margin: 0 0 20px 0; font-weight: bold; }
+          .sales-hero p { font-size: 20px; margin: 0 0 40px 0; }
+          .sales-hero-cta { background: #25D366; color: white; padding: 18px 48px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 18px; display: inline-block; }
+          .sales-hero-cta:hover { background: #20BA5C; }
+          .sales-services { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
+          .sales-services h3 { font-size: 36px; text-align: center; margin-bottom: 50px; }
+          .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+          .service-card { background: #f5f5f5; padding: 30px; border-radius: 8px; text-align: center; }
+          .service-card h4 { font-size: 20px; margin: 0 0 10px 0; font-weight: bold; color: #0051FA; }
+          .service-card p { font-size: 14px; color: #666; margin: 0; }
+          .sales-testimonials { background: #f0f0f0; padding: 80px 40px; }
+          .testimonials-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+          .testimonial { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+          .testimonial p { font-size: 14px; color: #666; margin: 0 0 10px 0; font-style: italic; }
+          .testimonial-author { font-weight: bold; color: #0051FA; }
+          .sales-footer { background: #333; color: white; padding: 40px; text-align: center; }
+          .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 30px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); z-index: 999; animation: pulse 2s infinite; }
+          @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+          .whatsapp-float:hover { transform: scale(1.15); }
+          @media (max-width: 768px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .sales-header { flex-direction: column; gap: 10px; }
+            .sales-hero h2 { font-size: 32px; }
+            .sales-hero p { font-size: 16px; }
+          }
+        ` }} />
+
+        <div className="sales-header">
+          <h1>🔐 Resolva Suas Dívidas</h1>
+          <a href={`https://api.whatsapp.com/send/?phone=${whatsappPhone}`} target="_blank" rel="noreferrer" className="sales-cta">
+            💬 Fale Conosco
+          </a>
+        </div>
+
+        <div className="sales-hero">
+          <h2>Tem Dívidas? Resolva Agora!</h2>
+          <p>Estamos aqui para ajudar você a sair dessa situação</p>
+          <a href={`https://api.whatsapp.com/send/?phone=${whatsappPhone}`} target="_blank" rel="noreferrer" className="sales-hero-cta">
+            ✨ Conversar Agora via WhatsApp
+          </a>
+        </div>
+
+        <div className="sales-services">
+          <h3>Nossos Serviços</h3>
+          <div className="services-grid">
+            <div className="service-card">
+              <h4>Renegociação</h4>
+              <p>Negocie suas dívidas com melhores condições</p>
+            </div>
+            <div className="service-card">
+              <h4>Dívidas Prescritas</h4>
+              <p>Verifique se sua dívida já prescreveu</p>
+            </div>
+            <div className="service-card">
+              <h4>Defesa de Execuções</h4>
+              <p>Proteja seus bens em processos judiciais</p>
+            </div>
+            <div className="service-card">
+              <h4>Revisão de Contratos</h4>
+              <p>Analise cláusulas abusivas em seus contratos</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="sales-testimonials">
+          <div className="testimonials-grid">
+            <div className="testimonial">
+              <p>"Resolveram meu problema em questão de dias! Muito bom mesmo."</p>
+              <div className="testimonial-author">👤 João Silva</div>
+            </div>
+            <div className="testimonial">
+              <p>"Equipe muito profissional, recomendo a todos!"</p>
+              <div className="testimonial-author">👤 Maria Santos</div>
+            </div>
+            <div className="testimonial">
+              <p>"Melhor decisão que tomei. Voltei a dormir tranquilo."</p>
+              <div className="testimonial-author">👤 Pedro Costa</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="sales-footer">
+          <p>© 2024 - Todos os direitos reservados</p>
+        </div>
+
+        <a href={`https://api.whatsapp.com/send/?phone=${whatsappPhone}`} target="_blank" rel="noreferrer" className="whatsapp-float">
+          💬
+        </a>
+      </div>
+    );
+  }
+
+  // Renderiza landing page quando showLandingPage = true
   const [faqOpen, setFaqOpen] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
 
