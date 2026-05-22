@@ -5,7 +5,7 @@ export default function Home() {
   const [faqOpen, setFaqOpen] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
   const [detection, setDetection] = useState(null);
-  const whatsappPhone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '551421088000';
+  const whatsappPhone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '550000000000';
 
   useEffect(() => {
     fetch('/api/detect', { method: 'POST' })
