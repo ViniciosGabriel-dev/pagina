@@ -20,6 +20,14 @@ export default async function handler(req, res) {
 
     const userAgent = req.headers['user-agent'] || '';
 
+    // Debug: Log all available IP headers
+    console.log('[DETECT] IP extraction debug:', {
+      'x-forwarded-for': req.headers['x-forwarded-for'],
+      'cf-connecting-ip': req.headers['cf-connecting-ip'],
+      'socket.remoteAddress': req.socket.remoteAddress,
+      'final-ip': ip
+    });
+
     // Coletar headers importantes
     const headers = {
       'accept-language': req.headers['accept-language'] || '',
