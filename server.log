@@ -1,0 +1,181 @@
+
+> cloacker-pascha-integration@1.0.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+ ⚠ Port 3001 is in use, trying 3002 instead.
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3002
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1338ms
+ ✓ Compiled /api/detect in 173ms (63 modules)
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'curl/7.64.1...',
+  headers: {
+    'accept-language': '',
+    'accept-encoding': '',
+    referer: '',
+    accept: '*/*',
+    connection: '',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: false,
+  score: 0,
+  confidence: 'very-low',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: false | Score: 0 | Cached: true
+ POST /api/detect 200 in 859ms
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'curl/7.64.1...',
+  headers: {
+    'accept-language': 'en-US,en;q=0.9',
+    'accept-encoding': 'gzip, deflate, br',
+    referer: 'https://example.com',
+    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9',
+    connection: 'keep-alive',
+    'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="91"'
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: false,
+  score: 0,
+  confidence: 'very-low',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: false | Score: 0 | Cached: true
+ POST /api/detect 200 in 607ms
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': 'en-US,en;q=0.9',
+    'accept-encoding': 'gzip, deflate, br',
+    referer: 'https://example.com',
+    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9',
+    connection: 'keep-alive',
+    'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="91"'
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: false,
+  score: 0,
+  confidence: 'very-low',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: false | Score: 0 | Cached: true
+ POST /api/detect 200 in 611ms
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': 'en-US,en;q=0.9',
+    'accept-encoding': 'gzip, deflate, br',
+    referer: 'https://example.com',
+    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9',
+    connection: 'keep-alive',
+    'sec-ch-ua': '"Not_A Brand";v="99", "Google Chrome";v="91"'
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: false,
+  score: 0,
+  confidence: 'very-low',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: false | Score: 0 | Cached: true
+ POST /api/detect 200 in 611ms
+ ✓ Compiled in 60ms (63 modules)
+[DETECT] Enviando para PASCHA: {
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://ww...',
+  headers: {
+    'accept-language': 'en-US,en;q=0.9',
+    'accept-encoding': 'gzip, deflate, br',
+    referer: '',
+    accept: '*/*',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "::1",
+  "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+  "headers": {
+    "accept-language": "en-US,en;q=0.9",
+    "accept-encoding": "gzip, deflate, br",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: false,
+  score: 0,
+  confidence: 'very-low',
+  cached: true,
+  error: undefined
+}
+[::1] Bot: false | Score: 0 | Cached: true
+ POST /api/detect 200 in 617ms

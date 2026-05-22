@@ -58,7 +58,16 @@
       "Bash(node test-production.js)",
       "Bash(curl -s -X POST https://pagina-phi-five.vercel.app/api/detect -H 'Content-Type: application/json' -H 'User-Agent: curl/7.64.1')",
       "Bash(curl -s -X POST https://cloacker-production-849d.up.railway.app/api/detect-visitor -H 'Authorization: Bearer 57473cb2771ac49531c7657889d09e26a837aa67189ac317c8106c6675e37134' -H 'Content-Type: application/json' -d '{ *)",
-      "Bash(curl -s -X POST https://pagina-phi-five.vercel.app/api/detect -H 'Content-Type: application/json' -H 'User-Agent: Mozilla/5.0 \\(compatible; Googlebot/2.1; +http://www.google.com/bot.html\\)')"
+      "Bash(curl -s -X POST https://pagina-phi-five.vercel.app/api/detect -H 'Content-Type: application/json' -H 'User-Agent: Mozilla/5.0 \\(compatible; Googlebot/2.1; +http://www.google.com/bot.html\\)')",
+      "Bash(curl -X POST http://localhost:3000/api/detect -H \"User-Agent: curl/7.64.1\" -H \"Content-Type: application/json\")",
+      "Bash(curl -s -X POST http://localhost:3000/api/detect -H \"User-Agent: curl/7.64.1\")",
+      "Bash(curl -s -X POST https://cloacker-production-849d.up.railway.app/api/detect-visitor -H 'Authorization: Bearer 57473cb2771ac49531c7657889d09e26a837aa67189ac317c8106c6675e37134' -H 'Content-Type: application/json' -d '{\"ip\":\"189.45.67.123\",\"userAgent\":\"curl/7.64.1\",\"headers\":{},\"geo\":{\"country\":\"BR\"}}')",
+      "Bash(curl -X POST http://localhost:3002/api/detect -H 'User-Agent: curl/7.64.1' -H 'Accept-Language: en-US,en;q=0.9' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9' -H 'Connection: keep-alive' -H 'Sec-CH-UA: \"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"91\"' -H 'Referer: https://example.com' -v)",
+      "Bash(Get-Content \"c:\\\\Users\\\\Vinicios\\\\Desktop\\\\cloacker-pascha-example\\\\server.log\" -Tail 30)",
+      "Bash(curl -s -X POST http://localhost:3002/api/detect -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/91.0.4472.124 Safari/537.36' -H 'Accept-Language: en-US,en;q=0.9' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9' -H 'Connection: keep-alive' -H 'Sec-CH-UA: \"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"91\"' -H 'Referer: https://example.com')",
+      "Bash(curl -s -X POST https://pagina-phi-five.vercel.app/api/detect -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/91.0.4472.124 Safari/537.36' -H 'Accept-Language: en-US,en;q=0.9' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9' -H 'Connection: keep-alive' -H 'Sec-CH-UA: \"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"91\"' -H 'Referer: https://pagina-phi-five.vercel.app')",
+      "Bash(curl -s -X POST https://pagina-phi-five.vercel.app/api/detect -H 'User-Agent: Mozilla/5.0 \\(compatible; Googlebot/2.1; +http://www.google.com/bot.html\\)' -H 'Accept-Language: en-US,en;q=0.9' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Referer: https://pagina-phi-five.vercel.app')",
+      "Bash(curl -s -X POST http://localhost:3002/api/detect -H 'User-Agent: Mozilla/5.0 \\(compatible; Googlebot/2.1; +http://www.google.com/bot.html\\)' -H 'Accept-Language: en-US,en;q=0.9' -H 'Accept-Encoding: gzip, deflate, br' -H 'Accept: */*' -H 'Connection: keep-alive')"
     ]
   }
 }
