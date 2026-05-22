@@ -325,3 +325,303 @@
 }
 [203.45.67.100] Bot: true | Score: 50 | Cached: false
  POST /api/detect 200 in 609ms
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '203.45.67.100',
+  'cf-connecting-ip': undefined,
+  'socket.remoteAddress': '::1',
+  'final-ip': '203.45.67.100'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '203.45.67.100',
+  userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://ww...',
+  headers: {
+    'accept-language': 'en-US,en;q=0.9',
+    'accept-encoding': 'gzip, deflate, br',
+    referer: '',
+    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "203.45.67.100",
+  "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+  "headers": {
+    "accept-language": "en-US,en;q=0.9",
+    "accept-encoding": "gzip, deflate, br",
+    "referer": "",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 23120,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 50,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T01:09:55.062Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 50,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: true,
+  error: undefined
+}
+[203.45.67.100] Bot: true | Score: 50 | Cached: true
+ POST /api/detect 200 in 608ms
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '192.168.1.100',
+  'cf-connecting-ip': undefined,
+  'socket.remoteAddress': '::1',
+  'final-ip': '192.168.1.100'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '192.168.1.100',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...',
+  headers: {
+    'accept-language': 'en-US,en;q=0.9',
+    'accept-encoding': 'gzip, deflate, br',
+    referer: '',
+    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "192.168.1.100",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/91.0.4472.124 Safari/537.36",
+  "headers": {
+    "accept-language": "en-US,en;q=0.9",
+    "accept-encoding": "gzip, deflate, br",
+    "referer": "",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": false,
+  "isBot": false,
+  "score": 0,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0
+  },
+  "confidence": "very-low",
+  "recommendation": "oferta",
+  "details": {
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/91.0.4472.124 Safari/537.36",
+    "country": "unknown",
+    "tlsAnalysis": {
+      "tlsScore": -15,
+      "tlsVersion": "unknown",
+      "cipherCount": 1,
+      "hasExtensions": false,
+      "isHeadless": false
+    }
+  },
+  "timestamp": "2026-05-22T01:10:18.881Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0
+}
+[PASCHA] Cache hit: false
+[DETECT] Resposta PASCHA: {
+  isBot: false,
+  score: 0,
+  confidence: 'very-low',
+  cached: false,
+  error: undefined
+}
+[192.168.1.100] Bot: false | Score: 0 | Cached: false
+ POST /api/detect 200 in 185ms
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '189.45.67.123',
+  'cf-connecting-ip': undefined,
+  'socket.remoteAddress': '::1',
+  'final-ip': '189.45.67.123'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '189.45.67.123',
+  userAgent: 'curl/7.64.1...',
+  headers: {
+    'accept-language': 'en-US,en;q=0.9',
+    'accept-encoding': 'gzip, deflate, br',
+    referer: '',
+    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "189.45.67.123",
+  "userAgent": "curl/7.64.1",
+  "headers": {
+    "accept-language": "en-US,en;q=0.9",
+    "accept-encoding": "gzip, deflate, br",
+    "referer": "",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": true,
+  "cacheAge": 229078,
+  "isBot": true,
+  "score": 95,
+  "scoreBreakdown": {
+    "botSignature": 50,
+    "browserHeaders": 30,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 15
+  },
+  "confidence": "very-high",
+  "recommendation": "safe",
+  "timestamp": "2026-05-22T01:06:30.502Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 50,
+  browserHeaders: 30,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 15
+}
+[PASCHA] Cache hit: true
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 95,
+  confidence: 'very-high',
+  cached: true,
+  error: undefined
+}
+[189.45.67.123] Bot: true | Score: 95 | Cached: true
+ POST /api/detect 200 in 183ms
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '81.107.120.100',
+  'cf-connecting-ip': undefined,
+  'socket.remoteAddress': '::1',
+  'final-ip': '81.107.120.100'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '81.107.120.100',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...',
+  headers: {
+    'accept-language': 'en-US,en;q=0.9',
+    'accept-encoding': 'gzip, deflate, br',
+    referer: '',
+    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9',
+    connection: 'keep-alive',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "81.107.120.100",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Safari/537.36",
+  "headers": {
+    "accept-language": "en-US,en;q=0.9",
+    "accept-encoding": "gzip, deflate, br",
+    "referer": "",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9",
+    "connection": "keep-alive",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": false,
+  "isBot": false,
+  "score": 0,
+  "scoreBreakdown": {
+    "botSignature": 0,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0
+  },
+  "confidence": "very-low",
+  "recommendation": "oferta",
+  "details": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Safari/537.36",
+    "country": "unknown",
+    "tlsAnalysis": {
+      "tlsScore": -15,
+      "tlsVersion": "unknown",
+      "cipherCount": 1,
+      "hasExtensions": false,
+      "isHeadless": false
+    }
+  },
+  "timestamp": "2026-05-22T01:10:20.266Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 0,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0
+}
+[PASCHA] Cache hit: false
+[DETECT] Resposta PASCHA: {
+  isBot: false,
+  score: 0,
+  confidence: 'very-low',
+  cached: false,
+  error: undefined
+}
+[81.107.120.100] Bot: false | Score: 0 | Cached: false
+ POST /api/detect 200 in 183ms

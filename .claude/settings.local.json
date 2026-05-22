@@ -72,7 +72,9 @@
       "Bash(node test-with-headers.js)",
       "Bash(mkdir -p \"c:\\\\Users\\\\Vinicios\\\\Desktop\\\\puppeteer-bot-test\")",
       "Bash(npm init *)",
-      "Bash(node open-site.js)"
+      "Bash(node open-site.js)",
+      "Bash(node open-as-bot.js)",
+      "Bash(node test-detection-result.js)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Vinicios\\Desktop\\puppeteer-bot-test"
