@@ -1,28 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Head from 'next/head';
 
-export default function Home() {
+export default function Home({ isBot, whatsappPhone }) {
   const [faqOpen, setFaqOpen] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
-  const [detection, setDetection] = useState(null);
-  const whatsappPhone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '550000000000';
-
-  useEffect(() => {
-    fetch('/api/detect', { method: 'POST' })
-      .then(r => r.json())
-      .then(data => {
-        setDetection(data);
-        if (data.isBot) {
-          console.warn('[BOT DETECTED]', { score: data.score, breakdown: data.scoreBreakdown });
-        } else {
-          console.log('[HUMAN] Visitante genuíno detectado', { score: data.score });
-        }
-      })
-      .catch(err => {
-        console.error('[DETECTION ERROR]', err);
-        setDetection({ isBot: false });
-      });
-  }, []);
 
   const faqs = [
     {
@@ -68,7 +49,7 @@ export default function Home() {
   ];
 
   // Página para bots - conteúdo educativo
-  if (detection?.isBot) {
+  if (isBot) {
     return (
       <div style={{ fontFamily: "'Montserrat', Arial, sans-serif", color: '#333', margin: 0, padding: 0, backgroundColor: '#f5f5f5', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ maxWidth: '800px', padding: '60px 40px', textAlign: 'center', backgroundColor: '#fff', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', margin: '40px' }}>
@@ -488,4 +469,49 @@ export default function Home() {
 
     </div>
   );
+}
+
+export async function getServerSideProps({ req }) {
+  try {
+    const protocol = req.headers['x-forwarded-proto'] || 'http';
+    const host = req.headers['x-forwarded-host'] || req.headers.host;
+    const baseUrl = `${protocol}://${host}`;
+
+    const response = await fetch(`${baseUrl}/api/detect`, {
+      method: 'POST',
+      headers: {
+        'user-agent': req.headers['user-agent'] || '',
+        'accept': req.headers['accept'] || '*/*',
+        'accept-language': req.headers['accept-language'] || '',
+        'x-forwarded-for': req.headers['x-forwarded-for'] || req.socket.remoteAddress,
+        'cf-connecting-ip': req.headers['cf-connecting-ip'] || '',
+      },
+    });
+
+    const detection = await response.json();
+    const whatsappPhone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '550000000000';
+
+    if (detection.isBot) {
+      console.warn('[BOT DETECTED - SERVER SIDE]', { score: detection.score, userAgent: req.headers['user-agent'] });
+    } else {
+      console.log('[HUMAN - SERVER SIDE] Visitante detectado', { score: detection.score });
+    }
+
+    return {
+      props: {
+        isBot: detection.isBot,
+        whatsappPhone,
+      },
+      revalidate: 60,
+    };
+  } catch (error) {
+    console.error('[DETECTION ERROR - SERVER SIDE]', error);
+    return {
+      props: {
+        isBot: false,
+        whatsappPhone: process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '550000000000',
+      },
+      revalidate: 60,
+    };
+  }
 }
