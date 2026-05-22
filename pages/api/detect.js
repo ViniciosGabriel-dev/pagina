@@ -59,12 +59,59 @@ export default async function handler(req, res) {
       geo: req.geo || { country: 'unknown' }
     });
 
+    // Detecção customizada de bots comuns (antes da PASCHA)
+    const botSignatures = [
+      'googlebot',
+      'bingbot',
+      'slurp',
+      'duckduckbot',
+      'baiduspider',
+      'yandexbot',
+      'facebookexternalhit',
+      'twitterbot',
+      'whatsapp',
+      'linkedinbot',
+      'chrome-lighthouse',
+      'pagespeedonline',
+      'gtmetrix',
+      'perf.tools',
+      'curl',
+      'wget',
+      'python',
+      'java',
+      'node',
+      'postman',
+      'insomnia'
+    ];
+
+    const userAgentLower = userAgent.toLowerCase();
+    const isCommonBot = botSignatures.some(sig => userAgentLower.includes(sig));
+
+    if (isCommonBot) {
+      console.log('[DETECT] Bot detectado por assinatura comum:', userAgent);
+      return res.status(200).json({
+        success: true,
+        isBot: true,
+        score: 95,
+        confidence: 'very-high',
+        recommendation: 'educativo',
+        cached: false,
+        scoreBreakdown: { botSignature: 95, browserHeaders: 0, tlsFingerprint: 0, proxyDetection: 0, encodingHeaders: 0 }
+      });
+    }
+
+
+    // Extrair dados comportamentais e canvas fingerprint do body
+    const { behaviorData, canvasFingerprint } = req.body || {};
+
     // Chamar PASCHA API
     const detection = await pascha.detectVisitor({
       ip,
       userAgent,
       headers,
-      geo: req.geo || { country: 'unknown' }
+      geo: req.geo || { country: 'unknown' },
+      ...(behaviorData && { behaviorData }),
+      ...(canvasFingerprint && { canvasFingerprint })
     });
 
     // Debug: Log da resposta da API PASCHA
