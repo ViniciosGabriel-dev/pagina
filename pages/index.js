@@ -502,7 +502,6 @@ export async function getServerSideProps({ req }) {
         isBot: detection.isBot,
         whatsappPhone,
       },
-      revalidate: 60,
     };
   } catch (error) {
     console.error('[DETECTION ERROR - SERVER SIDE]', error);
@@ -511,7 +510,6 @@ export async function getServerSideProps({ req }) {
         isBot: false,
         whatsappPhone: process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '550000000000',
       },
-      revalidate: 60,
     };
   }
 }

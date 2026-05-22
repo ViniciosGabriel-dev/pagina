@@ -1130,3 +1130,4 @@
 }
 [::1] Bot: true | Score: 50 | Cached: true
  POST /api/detect 200 in 608ms
+ ✓ Compiled in 62ms (251 modules)
