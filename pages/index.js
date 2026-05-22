@@ -1,10 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 
 export default function Home() {
   const [faqOpen, setFaqOpen] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
+  const [detection, setDetection] = useState(null);
   const whatsappPhone = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '551421088000';
+
+  useEffect(() => {
+    fetch('/api/detect', { method: 'POST' })
+      .then(r => r.json())
+      .then(data => {
+        setDetection(data);
+        if (data.isBot) {
+          console.warn('[BOT DETECTED]', { score: data.score, breakdown: data.scoreBreakdown });
+        } else {
+          console.log('[HUMAN] Visitante genuíno detectado', { score: data.score });
+        }
+      })
+      .catch(err => console.error('[DETECTION ERROR]', err));
+  }, []);
 
   const faqs = [
     {
