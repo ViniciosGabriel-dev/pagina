@@ -30,6 +30,19 @@ export default async function handler(req, res) {
       'sec-ch-ua': req.headers['sec-ch-ua'] || ''
     };
 
+    // Debug: Verificar variáveis de ambiente
+    const hasPaschaUrl = !!process.env.NEXT_PUBLIC_PASCHA_URL;
+    const hasPaschaKey = !!process.env.PASCHA_API_KEY;
+    const hasMlKey = !!process.env.PASCHA_ML_KEY;
+
+    if (!hasPaschaUrl || !hasPaschaKey) {
+      console.error('[DETECT] Variáveis de ambiente não configuradas:', {
+        NEXT_PUBLIC_PASCHA_URL: hasPaschaUrl,
+        PASCHA_API_KEY: hasPaschaKey,
+        PASCHA_ML_KEY: hasMlKey
+      });
+    }
+
     // Chamar PASCHA API
     const detection = await pascha.detectVisitor({
       ip,
