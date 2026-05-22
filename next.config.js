@@ -1,35 +1,42 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true,
+  compress: true,
+  generateEtags: true,
+  httpAgentOptions: {
+    keepAlive: true,
+  },
   async headers() {
     return [
       {
-        source: '/:path*',
+        source: '/sitemap.xml',
         headers: [
           {
-            key: 'Referrer-Policy',
-            value: 'no-referrer'
+            key: 'Content-Type',
+            value: 'application/xml; charset=utf-8',
           },
           {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=86400',
+          },
+        ],
+      },
+      {
+        source: '/robots.txt',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'text/plain; charset=utf-8',
           },
           {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN'
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, s-maxage=604800',
           },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block'
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'geolocation=(), microphone=(), camera=()'
-          }
-        ]
-      }
-    ]
-  }
-}
+        ],
+      },
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
