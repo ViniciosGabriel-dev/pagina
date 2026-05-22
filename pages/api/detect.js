@@ -43,12 +43,29 @@ export default async function handler(req, res) {
       });
     }
 
+    // Debug: Log do que será enviado à API PASCHA
+    console.log('[DETECT] Enviando para PASCHA:', {
+      ip,
+      userAgent: userAgent.substring(0, 50) + '...',
+      headers,
+      geo: req.geo || { country: 'unknown' }
+    });
+
     // Chamar PASCHA API
     const detection = await pascha.detectVisitor({
       ip,
       userAgent,
       headers,
       geo: req.geo || { country: 'unknown' }
+    });
+
+    // Debug: Log da resposta da API PASCHA
+    console.log('[DETECT] Resposta PASCHA:', {
+      isBot: detection.isBot,
+      score: detection.score,
+      confidence: detection.confidence,
+      cached: detection.cached,
+      error: detection.error
     });
 
     // Coletar dados para ML de forma assíncrona (não bloqueia resposta)
