@@ -244,3 +244,84 @@
 }
 [::1] Bot: false | Score: 0 | Cached: true
  POST /api/detect 200 in 612ms
+ ✓ Compiled in 48ms (63 modules)
+[DETECT] IP extraction debug: {
+  'x-forwarded-for': '203.45.67.100',
+  'cf-connecting-ip': undefined,
+  'socket.remoteAddress': '::1',
+  'final-ip': '203.45.67.100'
+}
+[DETECT] Enviando para PASCHA: {
+  ip: '203.45.67.100',
+  userAgent: 'Mozilla/5.0 (compatible; Googlebot/2.1)...',
+  headers: {
+    'accept-language': '',
+    'accept-encoding': '',
+    referer: '',
+    accept: '*/*',
+    connection: '',
+    'sec-ch-ua': ''
+  },
+  geo: { country: 'unknown' }
+}
+[PASCHA_CLIENT] Request body being sent: {
+  "ip": "203.45.67.100",
+  "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1)",
+  "headers": {
+    "accept-language": "",
+    "accept-encoding": "",
+    "referer": "",
+    "accept": "*/*",
+    "connection": "",
+    "sec-ch-ua": ""
+  },
+  "geo": {
+    "country": "unknown"
+  }
+}
+[PASCHA_CLIENT] Base URL: https://cloacker-production-849d.up.railway.app
+[PASCHA_CLIENT] API Key present: true
+[PASCHA_CLIENT] Raw response from PASCHA: {
+  "success": true,
+  "cached": false,
+  "isBot": true,
+  "score": 50,
+  "scoreBreakdown": {
+    "botSignature": 50,
+    "browserHeaders": 0,
+    "tlsFingerprint": 0,
+    "proxyDetection": 0,
+    "encodingHeaders": 0
+  },
+  "confidence": "medium",
+  "recommendation": "safe",
+  "details": {
+    "userAgent": "Mozilla/5.0 (compatible; Googlebot/2.1)",
+    "country": "unknown",
+    "tlsAnalysis": {
+      "tlsScore": -15,
+      "tlsVersion": "unknown",
+      "cipherCount": 1,
+      "hasExtensions": false,
+      "isHeadless": false
+    }
+  },
+  "timestamp": "2026-05-22T01:09:55.062Z"
+}
+[PASCHA] Score breakdown: {
+  botSignature: 50,
+  browserHeaders: 0,
+  tlsFingerprint: 0,
+  proxyDetection: 0,
+  encodingHeaders: 0
+}
+[PASCHA] Cache hit: false
+[DETECT] Resposta PASCHA: {
+  isBot: true,
+  score: 50,
+  confidence: 'medium',
+  cached: false,
+  error: undefined
+}
+[203.45.67.100] Bot: true | Score: 50 | Cached: false
+ POST /api/detect 200 in 609ms

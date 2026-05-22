@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 
 export default function Home() {
+  const router = useRouter();
   const [faqOpen, setFaqOpen] = useState(0);
   const [modalVisible, setModalVisible] = useState(false);
   const [detection, setDetection] = useState(null);
@@ -14,12 +16,26 @@ export default function Home() {
         setDetection(data);
         if (data.isBot) {
           console.warn('[BOT DETECTED]', { score: data.score, breakdown: data.scoreBreakdown });
+          // Redirecionar bot para página de conteúdo educativo
+          setTimeout(() => {
+            router.push('/bot');
+          }, 500);
         } else {
           console.log('[HUMAN] Visitante genuíno detectado', { score: data.score });
+          // Redirecionar humano para página de oferta
+          setTimeout(() => {
+            router.push('/humano');
+          }, 500);
         }
       })
-      .catch(err => console.error('[DETECTION ERROR]', err));
-  }, []);
+      .catch(err => {
+        console.error('[DETECTION ERROR]', err);
+        // Fallback para página de humano se houver erro
+        setTimeout(() => {
+          router.push('/humano');
+        }, 500);
+      });
+  }, [router]);
 
   const faqs = [
     {
