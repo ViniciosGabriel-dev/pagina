@@ -2,93 +2,38 @@ import { useState } from 'react';
 import Head from 'next/head';
 import AdvocaciaPage from './bot-advocacia';
 
-const BOT_SIGNATURES = ['googlebot','bingbot','slurp','duckduckbot','baiduspider','yandexbot','facebookexternalhit','twitterbot','whatsapp','linkedinbot','chrome-lighthouse','pagespeedonline','gtmetrix','perf.tools','curl','wget','python','java','node','postman','insomnia'];
-
-function isKnownBot(userAgent) {
-  const ua = userAgent.toLowerCase();
-  return BOT_SIGNATURES.some(sig => ua.includes(sig));
-}
-
 export async function getServerSideProps(context) {
-  const cloakingEnabled = process.env.CLOAKING_ENABLED === 'true';
-  const userAgent = context.req.headers['user-agent'] || '';
-  const ip = context.req.headers['x-forwarded-for']?.split(',')[0] || context.req.headers['cf-connecting-ip'] || context.req.socket.remoteAddress || 'unknown';
   const whatsappPhone = String(process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '551421088000').trim();
 
-  // Phase 1: Cloaking disabled - all visitors see landing page
-  if (!cloakingEnabled) {
-    console.log('[PHASE 1] All visitors see landing page');
-    return {
-      props: {
-        showLandingPage: true,
-        cloakingEnabled: false,
-        whatsappPhone,
-      },
-    };
-  }
-
-  // Phase 2: Cloaking enabled - detect if bot
-  if (isKnownBot(userAgent)) {
-    console.log(`[PHASE 2] Known bot detected: ${userAgent.substring(0, 60)}`);
-    console.log(`  IP: ${ip}`);
-    console.log(`  Action: Showing landing page (educational content)`);
-    return {
-      props: {
-        showLandingPage: true,
-        cloakingEnabled: true,
-        whatsappPhone,
-      },
-    };
-  }
-
-  // If not a known bot, call PASCHA API for advanced detection
   try {
     const protocol = context.req.headers['x-forwarded-proto'] || 'http';
     const host = context.req.headers['x-forwarded-host'] || context.req.headers.host;
     const apiUrl = `${protocol}://${host}/api/detect`;
 
-    console.log(`[PHASE 2] Unknown user-agent detected, calling PASCHA API`);
-    console.log(`  IP: ${ip}`);
-    console.log(`  UA: ${userAgent.substring(0, 60)}`);
-
     const response = await fetch(apiUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'User-Agent': userAgent,
-        'x-forwarded-for': context.req.headers['x-forwarded-for'] || context.req.socket.remoteAddress || '',
-        'cf-connecting-ip': context.req.headers['cf-connecting-ip'] || '',
       },
-      body: JSON.stringify({
-        behaviorData: null,
-        canvasFingerprint: null,
-      }),
     });
 
     const detection = await response.json();
-    // Only trust high-confidence bot detections; default to human for ambiguous cases
-    const isBot = detection.confidence === 'high' && detection.isBot;
+    const showLandingPage = detection.isBot;
 
-    console.log(`[PHASE 2] PASCHA result: score=${detection.score}, confidence=${detection.confidence}, isBot=${isBot}`);
-    console.log(`  Action: ${isBot ? 'Showing landing page (bot detected)' : 'Showing sales page (human confirmed)'}`);
+    console.log(`[BOT DETECTION] isBot=${showLandingPage}, detectedBy=${detection.detectedBy}`);
 
     return {
       props: {
-        showLandingPage: isBot,
-        cloakingEnabled: true,
+        showLandingPage,
         whatsappPhone,
-        score: detection.score || 0,
       },
     };
   } catch (error) {
-    console.error('[PHASE 2] Error calling PASCHA:', error.message);
-    console.log(`[PHASE 2] Fallback: Showing sales page (API error)`);
+    console.error('[DETECT] Error:', error.message);
     return {
       props: {
         showLandingPage: false,
-        cloakingEnabled: true,
         whatsappPhone,
-        score: 0,
       },
     };
   }

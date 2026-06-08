@@ -133,7 +133,13 @@
       "Bash(curl -s http://localhost:3001)",
       "Bash(curl -s -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" http://localhost:3001)",
       "Bash(curl -s -H \"User-Agent: Googlebot/2.1\" http://localhost:3001)",
-      "Bash(curl -s http://localhost:3001 -I)"
+      "Bash(curl -s http://localhost:3001 -I)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Users\\\\Vinicios\\\\Desktop\\\\cloacker-pascha-example\" -Directory)",
+      "WebFetch(domain:vercel.com)",
+      "Skill(deep-research)",
+      "Skill(deep-research:*)",
+      "WebSearch",
+      "Bash(git checkout *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Vinicios\\Desktop\\puppeteer-bot-test"
