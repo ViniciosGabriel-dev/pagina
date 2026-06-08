@@ -141,7 +141,9 @@
       "WebSearch",
       "Bash(git checkout *)",
       "Bash(gh pr create --title 'Integrate Vercel Bot ID as sole detection layer' --body ' *)",
-      "Bash(npm uninstall *)"
+      "Bash(npm uninstall *)",
+      "Bash(node scripts/test-bot-detection.js)",
+      "Bash(timeout 10 node scripts/test-bot-detection.js)"
     ],
     "additionalDirectories": [
       "c:\\Users\\Vinicios\\Desktop\\puppeteer-bot-test"
