@@ -10,63 +10,20 @@ export default async function handler(req, res) {
                req.socket.remoteAddress ||
                'unknown';
 
-    // Chamar PASCHA API (todas as detecções centralizadas lá)
-    // Front é apenas um proxy - PASCHA faz TODA a lógica
-    const botDetectionUrl = process.env.BOT_DETECTION_API_URL;
+    // [ÚNICA CAMADA] Vercel Bot ID Detection
+    // Header injetado automaticamente por Vercel quando detecta bot
+    const vercelBotId = req.headers['x-vercel-botid'];
+    const isBot = vercelBotId === 'true';
 
-    if (!botDetectionUrl) {
-      console.error('[DETECT] BOT_DETECTION_API_URL not configured');
-      return res.status(500).json({
-        success: false,
-        error: 'Bot detection service not configured',
-        isBot: false,
-        recommendation: 'oferta'
-      });
-    }
-
-    const apiKey = process.env.PASCHA_API_KEY || 'default-key';
-
-    const response = await fetch(botDetectionUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'User-Agent': userAgent,
-        'Authorization': `Bearer ${apiKey}`,
-      },
-      body: JSON.stringify({
-        ip,
-        userAgent,
-        headers: {
-          'accept-language': req.headers['accept-language'] || '',
-          'accept-encoding': req.headers['accept-encoding'] || '',
-          'accept': req.headers['accept'] || '',
-          'connection': req.headers['connection'] || '',
-          'x-vercel-botid': req.headers['x-vercel-botid'] || '',
-        },
-      }),
-    });
-
-    if (!response.ok) {
-      console.error(`[DETECT] Bot detection API error: ${response.status}`);
-      return res.status(500).json({
-        success: false,
-        error: 'Bot detection service error',
-        isBot: false,
-        recommendation: 'oferta'
-      });
-    }
-
-    const detection = await response.json();
-
-    console.log(`[DETECT] 🔍 PASCHA fallback: ${detection.isBot ? '🤖 Bot' : '👤 Human'} | Score: ${detection.score} | UA: ${userAgent.substring(0, 60)}`);
+    console.log(`[DETECT] ${isBot ? '🤖 Bot' : '👤 Human'} | IP: ${ip} | UA: ${userAgent.substring(0, 60)} | Source: Vercel Bot ID`);
 
     return res.status(200).json({
       success: true,
-      isBot: detection.isBot,
-      score: detection.score || (detection.isBot ? 95 : 5),
-      confidence: detection.confidence || 'high',
-      recommendation: detection.recommendation || (detection.isBot ? 'educativo' : 'oferta'),
-      source: 'pascha-fallback'
+      isBot,
+      score: isBot ? 95 : 5,
+      confidence: 'high',
+      recommendation: isBot ? 'educativo' : 'oferta',
+      detectedBy: 'vercel-botid'
     });
 
   } catch (error) {

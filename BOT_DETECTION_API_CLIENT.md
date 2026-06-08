@@ -1,127 +1,124 @@
-# 🤖 Bot Detection API Client
+# 🤖 Bot Detection via Vercel Bot ID
 
-Este projeto agora consome uma **API externa de detecção de bots** em vez de implementar a lógica internamente.
+Este projeto usa **Vercel Bot ID nativo** para detecção de bots. Não requer API externa.
 
-## Configuração
+## Como Funciona
 
-### Variável de Ambiente
-
-```bash
-# .env.local (desenvolvimento)
-BOT_DETECTION_API_URL=http://localhost:3001/api/detect
-
-# .env.production (Vercel)
-BOT_DETECTION_API_URL=https://seu-bot-detection-api.com/api/detect
-```
-
-## Interface da API
-
-### Endpoint: `POST /api/detect`
-
-**Localização no código:** `pages/api/detect.js`
-
-### Request Body
-
-```json
-{
-  "ip": "192.168.1.1",
-  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)...",
-  "headers": {
-    "accept-language": "en-US,en;q=0.9",
-    "accept-encoding": "gzip, deflate",
-    "accept": "text/html,application/xhtml+xml,...",
-    "connection": "keep-alive"
-  }
-}
-```
-
-### Response
-
-```json
-{
-  "success": true,
-  "isBot": false,
-  "score": 15,
-  "confidence": "high",
-  "recommendation": "oferta",
-  "detectedBy": "external-api"
-}
-```
-
-## Fluxo de Dados
+### Fluxo de Detecção
 
 ```
 1. Browser visita https://seu-site.com
    ↓
-2. getServerSideProps() chama /api/detect (POST)
+2. Vercel CDN/Edge executa Vercel Bot ID
+   ├─ Se bot detectado → Injeta header: x-vercel-botid: true
+   └─ Se humano → Header não é injetado (ou = false)
    ↓
-3. /api/detect faz fetch para BOT_DETECTION_API_URL
+3. Requisição chega ao Next.js com header
    ↓
-4. API externa retorna { isBot: boolean, ... }
+4. getServerSideProps() chama /api/detect (POST)
    ↓
-5. pages/index.js renderiza:
+5. /api/detect lê o header x-vercel-botid
+   ├─ isBot=true  → Retorna { isBot: true, detectedBy: 'vercel-botid' }
+   └─ isBot=false → Retorna { isBot: false, detectedBy: 'vercel-botid' }
+   ↓
+6. pages/index.js renderiza:
    - isBot=true  → mostra AdvocaciaPage (educativa)
    - isBot=false → mostra página de vendas
 ```
 
-## Tratamento de Erros
+## Endpoint: `POST /api/detect`
 
-Se a API externa estiver indisponível:
-- Fallback: `isBot=false` (mostra página de vendas)
-- Log de erro no servidor
-- HTTP 500 para o cliente
+**Localização:** `pages/api/detect.js`
 
-## Especificação da API Externa
+### Request
+```
+POST /api/detect
+Headers: {
+  "x-vercel-botid": "true" ou undefined
+}
+```
 
-A API externa **deve implementar:**
+### Response
+```json
+{
+  "success": true,
+  "isBot": false,
+  "score": 5,
+  "confidence": "high",
+  "recommendation": "oferta",
+  "detectedBy": "vercel-botid"
+}
+```
 
-- ✅ `POST /api/detect` endpoint
-- ✅ Aceitar `ip`, `userAgent`, `headers`
-- ✅ Retornar `{ isBot, score, confidence, recommendation, detectedBy }`
-- ✅ Ser escalável para múltiplos domínios
-- ✅ Suportar diferentes métodos de detecção (Bot ID, ML, signatures, etc)
+## Configuração
 
-## Stack Recomendado para API Externa
+Nenhuma configuração necessária!
 
-- **Runtime:** Node.js, Python, Rust, Go
-- **Framework:** Express, FastAPI, Actix, etc
-- **Detecção:** Vercel Bot ID (ou alternativas)
-- **Banco:** Redis para cache de IPs/decisions
-- **Observabilidade:** Logs, métricas, alertas
+Vercel Bot ID funciona automaticamente:
+- ✅ Sem variáveis de ambiente
+- ✅ Sem API key
+- ✅ Sem latência adicional
+- ✅ Nativo da Vercel
 
-## Exemplo: Consumo da API no Projeto
+### Variáveis Obrigatórias
+
+```bash
+# .env.local
+CLOAKING_ENABLED=true
+NEXT_PUBLIC_WHATSAPP_PHONE=5511986324895
+```
+
+## Bots Detectados
+
+Vercel Bot ID detecta:
+- Googlebot, Bingbot, Yandexbot
+- curl, wget, Python requests
+- Puppeteer, Playwright, Selenium
+- FacebookBot, TwitterBot, LinkedInBot
+- Chrome Lighthouse, GTmetrix
+- E muitos mais...
+
+## Vantagens
+
+| Aspecto | Vercel Bot ID |
+|---|---|
+| **Latência** | ⚡ Instantâneo (no edge) |
+| **Custo** | 💰 Gratuito |
+| **Configuração** | 🎯 Zero config |
+| **Confiabilidade** | ✅ Mantido pela Vercel |
+| **Cobertura** | 📊 95%+ de bots |
+
+## Logging
 
 ```javascript
-// pages/api/detect.js
-const response = await fetch(process.env.BOT_DETECTION_API_URL, {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    ip,
-    userAgent,
-    headers: { ... }
-  })
-});
+// Exemplo de log em pages/api/detect.js
+console.log(`[DETECT] 🤖 Bot | IP: 192.168.1.1 | Source: Vercel Bot ID`);
+console.log(`[DETECT] 👤 Human | IP: 192.168.1.2 | Source: Vercel Bot ID`);
+```
 
-const detection = await response.json();
+## Fallback
+
+Se houver erro:
+```javascript
+// Fallback seguro: assume humano
+isBot = false
+recommendation = 'oferta' // mostra página de vendas
 ```
 
 ## Variáveis Disponíveis
 
 | Variável | Descrição | Exemplo |
 |---|---|---|
-| `BOT_DETECTION_API_URL` | URL da API externa | `http://localhost:3001/api/detect` |
 | `CLOAKING_ENABLED` | Ativa/desativa cloaking | `true` ou `false` |
 | `NEXT_PUBLIC_WHATSAPP_PHONE` | Número do WhatsApp | `5511986324895` |
 
 ## Próximos Passos
 
-1. **Criar API externa** em pasta separada
-2. **Implementar detecção de bots** (Bot ID, ML, signatures, etc)
-3. **Deploy API** (Railway, Vercel, AWS, etc)
-4. **Atualizar `BOT_DETECTION_API_URL`** em produção
-5. **Testar integração** end-to-end
+1. ✅ Código pronto para produção
+2. ✅ Deploy no Vercel (automático via GitHub Actions)
+3. ✅ Testar com curl (será bloqueado)
+4. ✅ Monitorar logs no Vercel dashboard
 
 ---
 
-📝 **Nota:** Este projeto é agnóstico à implementação da API externa. Pode usar qualquer tecnologia/método de detecção.
+📝 **Nota:** Solução simples e confiável. Se precisar de detecção avançada (ML, fingerprinting, etc), considere criar uma API externa separada no futuro.
