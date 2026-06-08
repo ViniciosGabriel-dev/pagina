@@ -1,13 +1,15 @@
 import Head from 'next/head';
 
-export default function AdvocaciaPage() {
+export default function AdvocaciaPage({ whatsappPhone = '551199999999' }) {
+  const formattedPhone = whatsappPhone.startsWith('+') ? whatsappPhone : `+${whatsappPhone}`;
+
   const schemaOrg = {
     "@context": "https://schema.org",
     "@type": "LegalService",
     "name": "Monteiro & Vasconcelos Advocacia",
     "description": "Especialistas em negociação de dívidas e recuperação financeira com experiência em renegociação bancária e análise jurídica.",
     "url": "https://mvadvocacia.com.br",
-    "telephone": "+551199999999",
+    "telephone": formattedPhone,
     "email": "contato@mvadvocacia.com",
     "areaServed": "BR",
     "serviceType": "Negociação de Dívidas",
@@ -290,7 +292,7 @@ export default function AdvocaciaPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="https://wa.me/551199999999"
+                  href={`https://wa.me/${whatsappPhone}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-yellow-500 hover:bg-yellow-600 text-zinc-950 font-bold px-8 py-4 rounded-lg transition"
@@ -349,8 +351,8 @@ export default function AdvocaciaPage() {
               <h4 className="text-white font-bold mb-4">Contato</h4>
               <div className="text-sm space-y-2">
                 <p>
-                  <a href="tel:+551199999999" className="hover:text-yellow-400 transition">
-                    +55 (11) 99999-9999
+                  <a href={`tel:${formattedPhone}`} className="hover:text-yellow-400 transition">
+                    {formattedPhone}
                   </a>
                 </p>
                 <p>

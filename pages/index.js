@@ -142,7 +142,7 @@ export default function Home({ showLandingPage, whatsappPhone = '551421088000' }
   ];
 
   if (showLandingPage) {
-    return <AdvocaciaPage />;
+    return <AdvocaciaPage whatsappPhone={whatsappPhone} />;
   }
 
   return (
