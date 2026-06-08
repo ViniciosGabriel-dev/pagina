@@ -38,11 +38,14 @@ export default async function handler(req, res) {
       });
     }
 
+    const apiKey = process.env.PASCHA_API_KEY || 'default-key';
+
     const response = await fetch(botDetectionUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'User-Agent': userAgent,
+        'Authorization': `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
         ip,

@@ -14,7 +14,17 @@ export async function getServerSideProps(context) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'user-agent': context.req.headers['user-agent'] || '',
       },
+      body: JSON.stringify({
+        userAgent: context.req.headers['user-agent'] || '',
+        headers: {
+          'accept-language': context.req.headers['accept-language'] || '',
+          'accept': context.req.headers['accept'] || '',
+          'accept-encoding': context.req.headers['accept-encoding'] || '',
+          'connection': context.req.headers['connection'] || '',
+        }
+      })
     });
 
     const detection = await response.json();
