@@ -1,12 +1,15 @@
 {
   "name": "cloacker-pascha-integration",
   "version": "1.0.0",
-  "description": "Integração PASCHA Bot Detection em Next.js",
+  "description": "Integração de Bot Detection com Vercel Bot ID",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:simulation": "node scripts/test-bot-detection.js",
+    "test:bot": "node scripts/test-specific-bot.js",
+    "test:curl": "bash scripts/test-with-curl.sh"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

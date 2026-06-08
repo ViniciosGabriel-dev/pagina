@@ -1,0 +1,31 @@
+# Terminal 1 -- rodar a api localmente.
+npm run dev
+
+# Terminal 2
+npm run test:simulation -- rodar os testes automatizados.
+
+
+-------
+
+
+## estar Bot Específico
+npm run test:bot "Googlebot" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+
+##Testar com curl (simulação real)
+bash scripts/test-with-curl.sh
+
+
+-------
+
+
+# Resultado Esperado em localhost: 
+
+📊 RESUMO DOS TESTES:
+
+  ✓ Passou:       13/26  (humanos + edge cases)
+  ✗ Falhou:       13/26  (bots - esperado, pois Bot ID é produção-only)
+  ⚠ Erros:        0/26
+
+  Taxa de Sucesso: 50.0%
+
+⚠️ Nota: Vercel Bot ID só funciona em produção!
