@@ -4,6 +4,28 @@ export default async function handler(req, res) {
   }
 
   try {
+    const userAgent = req.headers['user-agent'] || '';
+    const ip = req.headers['x-forwarded-for']?.split(',')[0] ||
+               req.headers['cf-connecting-ip'] ||
+               req.socket.remoteAddress ||
+               'unknown';
+
+    // [PHASE 1] Verificar Vercel Bot ID (nativo, instantâneo)
+    const vercelBotId = req.headers['x-vercel-botid'] === 'true';
+    if (vercelBotId) {
+      console.log('[DETECT] 🤖 Bot detectado via Vercel Bot ID:', userAgent.substring(0, 80));
+      return res.status(200).json({
+        success: true,
+        isBot: true,
+        score: 95,
+        confidence: 'very-high',
+        recommendation: 'educativo',
+        cached: false,
+        source: 'vercel-botid'
+      });
+    }
+
+    // [PHASE 2] Fallback: PASCHA API (para casos não detectados por Vercel)
     const botDetectionUrl = process.env.BOT_DETECTION_API_URL;
 
     if (!botDetectionUrl) {
@@ -15,12 +37,6 @@ export default async function handler(req, res) {
         recommendation: 'oferta'
       });
     }
-
-    const userAgent = req.headers['user-agent'] || '';
-    const ip = req.headers['x-forwarded-for']?.split(',')[0] ||
-               req.headers['cf-connecting-ip'] ||
-               req.socket.remoteAddress ||
-               'unknown';
 
     const response = await fetch(botDetectionUrl, {
       method: 'POST',
@@ -52,13 +68,15 @@ export default async function handler(req, res) {
 
     const detection = await response.json();
 
+    console.log(`[DETECT] 🔍 PASCHA fallback: ${detection.isBot ? '🤖 Bot' : '👤 Human'} | Score: ${detection.score} | UA: ${userAgent.substring(0, 60)}`);
+
     return res.status(200).json({
       success: true,
       isBot: detection.isBot,
       score: detection.score || (detection.isBot ? 95 : 5),
       confidence: detection.confidence || 'high',
       recommendation: detection.recommendation || (detection.isBot ? 'educativo' : 'oferta'),
-      detectedBy: detection.detectedBy || 'external-api'
+      source: 'pascha-fallback'
     });
 
   } catch (error) {
