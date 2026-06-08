@@ -133,7 +133,8 @@
       "Bash(curl -s http://localhost:3001)",
       "Bash(curl -s -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" http://localhost:3001)",
       "Bash(curl -s -H \"User-Agent: Googlebot/2.1\" http://localhost:3001)",
-      "Bash(curl -s http://localhost:3001 -I)"
+      "Bash(curl -s http://localhost:3001 -I)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Vinicios\\\\Desktop\\\\cloacker-pascha-example\" -Exclude node_modules | Select-Object Name, @{Name=\"Type\"; Expression={if \\($_.PSIsContainer\\) { \"Dir\" } else { $_.Extension }}})"
     ],
     "additionalDirectories": [
       "c:\\Users\\Vinicios\\Desktop\\puppeteer-bot-test"

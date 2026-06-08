@@ -1,195 +1,149 @@
-# 🔌 Integração PASCHA - Exemplo Pronto
+# 🎭 Cloacking System - Cloacker Pascha
 
-Este é um exemplo **completo e pronto para usar** de como integrar a API PASCHA em um projeto Next.js.
+Sistema de detecção de bots e cloacking inteligente para Next.js que serve conteúdo diferente para bots (SEO) e humanos (vendas).
 
-## 📋 O que está incluído?
+## 📋 Características
 
-- ✅ Cliente PASCHA (`lib/pascha-client.js`)
-- ✅ API route de detecção (`pages/api/detect.js`)
-- ✅ Landing page com redirecionamento automático (`pages/index.js`)
-- ✅ Configuração de variáveis de ambiente (`.env.local`)
-- ✅ Tratamento de fallback se API cair
-- ✅ Coleta de dados ML assíncrona
-- ✅ Logging de debug
+✅ **Detecção de Bots**
+- Identifica Googlebot, Bingbot, cURL, Wget e outros bots comuns
+- Suporta integração com API PASCHA para detecção avançada
+- Fallback seguro em caso de erro
 
-## 🚀 Como Usar
+✅ **Cloacking Configurável**
+- Phase 1: Todos veem página de vendas (CLOAKING_ENABLED=false)
+- Phase 2: Bots veem página educativa, humanos veem página de vendas (CLOAKING_ENABLED=true)
 
-### 1️⃣ **Copiar para seu projeto**
+✅ **Dual Content**
+- **Para Bots**: Página de Advocacia (Negociação de Dívidas) - otimizada para SEO
+- **Para Humanos**: Página de Vendas (Paschoalotto - Pagou Fácil)
 
+## 🚀 Quick Start
+
+### 1. Instalar dependências
 ```bash
-# Copie estes arquivos para seu Next.js:
-lib/pascha-client.js → seu-projeto/lib/
-pages/api/detect.js → seu-projeto/pages/api/
-pages/index.js → seu-projeto/pages/
-.env.local → seu-projeto/
+npm install
 ```
 
-### 2️⃣ **Configurar Variáveis de Ambiente**
-
-Edite `.env.local`:
-
+### 2. Configurar variáveis de ambiente
 ```bash
-NEXT_PUBLIC_PASCHA_URL=https://seu-projeto-pascha.railway.app
-PASCHA_API_KEY=sua-chave-api-aqui
-PASCHA_ML_KEY=sua-chave-ml-aqui
+cp .env.example .env.local
 ```
 
-**Onde conseguir as chaves:**
-1. Abra seu projeto PASCHA no Railway
-2. Settings → Variables
-3. Copie `API_KEY` e `ML_DATA_KEY`
+Variáveis essenciais:
+```env
+CLOAKING_ENABLED=true                           # Ativar cloacking
+NEXT_PUBLIC_WHATSAPP_PHONE=5511999999999       # Seu WhatsApp
+```
 
-### 3️⃣ **Testar Localmente**
-
+### 3. Rodar localmente
 ```bash
 npm run dev
-# Acesse: http://localhost:3000
 ```
 
----
+Acesse: http://localhost:3000
 
-## 📖 Como Funciona?
+## 📊 Testes Rápidos
 
-### Fluxo Completo:
-
-```
-1. Visitante acessa localhost:3000
-2. useEffect chama /api/detect
-3. /api/detect chama PASCHA API
-4. PASCHA retorna: { isBot, score, scoreBreakdown, cached }
-5. Se isBot=true → redireciona para /seguro
-6. Se isBot=false → mostra oferta (página /oferta)
-7. Dados coletados para ML (assíncrono)
-```
-
-### Arquivos Principais:
-
-**`lib/pascha-client.js`**
-- Classe `PaschaClient` com métodos:
-  - `detectVisitor(options)` → detecta bot/humano
-  - `collectMLData(data)` → coleta dados para ML
-- Cria instância global `pascha` exportada
-
-**`pages/api/detect.js`**
-- Extrai IP, User-Agent, Headers do visitante
-- Chama `pascha.detectVisitor()`
-- Coleta dados ML de forma assíncrona
-- Retorna JSON com resultado
-
-**`pages/index.js`**
-- Loading page enquanto detecta
-- Redireciona para /seguro (bots) ou /oferta (humanos)
-- Mostra score breakdown em um `<details>`
-
----
-
-## 🎯 Usar em Suas Próprias Páginas
-
-Você não precisa redirecionar obrigatoriamente. Pode usar a detecção em qualquer lugar:
-
-### Exemplo: Condicionar Conteúdo
-
-```javascript
-import { useEffect, useState } from 'react';
-
-export default function MyPage() {
-  const [detection, setDetection] = useState(null);
-
-  useEffect(() => {
-    fetch('/api/detect', { method: 'POST' })
-      .then(r => r.json())
-      .then(setDetection);
-  }, []);
-
-  if (!detection) return <p>Carregando...</p>;
-
-  return (
-    <div>
-      {detection.isBot ? (
-        <p>👤 Conteúdo para bots</p>
-      ) : (
-        <p>👨 Conteúdo para humanos</p>
-      )}
-      
-      <details>
-        <summary>Score: {detection.score}</summary>
-        <pre>{JSON.stringify(detection.scoreBreakdown, null, 2)}</pre>
-      </details>
-    </div>
-  );
-}
-```
-
----
-
-## 🔐 Segurança
-
-✅ Nunca exponha `PASCHA_API_KEY` no cliente
-✅ Sempre chame via `/api/detect` (backend)
-✅ Use variáveis de ambiente para tokens
-✅ Não commit `.env.local` no git
-
----
-
-## 🧪 Testar com Bot
-
+### Testar como Googlebot
 ```bash
-# Simular requisição de bot
-curl -H "User-Agent: curl/7.64.1" \
-  http://localhost:3000/api/detect
-
-# Esperado: "isBot": true
+curl -X GET \
+  -H "User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1)" \
+  -H "X-Forwarded-For: 203.45.67.100" \
+  http://localhost:3000/
 ```
 
----
+Resultado esperado: **Página de Advocacia** (Negociação de Dívidas)
 
-## 📊 Response Example
-
-```json
-{
-  "success": true,
-  "isBot": false,
-  "score": 25,
-  "confidence": "low",
-  "recommendation": "oferta",
-  "cached": false,
-  "scoreBreakdown": {
-    "botSignature": 0,
-    "browserHeaders": 10,
-    "tlsFingerprint": 15,
-    "proxyDetection": 0,
-    "encodingHeaders": 0
-  },
-  "details": {
-    "userAgent": "Mozilla/5.0...",
-    "country": "BR",
-    "tlsAnalysis": {...}
-  }
-}
+### Testar como Chrome
+```bash
+curl -X GET \
+  -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/91.0" \
+  -H "X-Forwarded-For: 192.168.1.100" \
+  http://localhost:3000/
 ```
 
----
+Resultado esperado: **Página de Vendas** (Paschoalotto)
 
-## ❓ FAQ
+## 📁 Estrutura do Projeto
 
-**P: E se PASCHA cair?**
-R: Tem fallback - volta para `isBot: false` (considera humano)
+```
+.
+├── pages/
+│   ├── index.js                 # Página principal com cloacking
+│   ├── bot-advocacia.js         # Conteúdo para bots (SEO)
+│   ├── api/
+│   │   └── detect.js           # API de detecção
+│   ├── bot/                     # Páginas adicionais para bots
+│   │   ├── faq.js
+│   │   ├── sobre.js
+│   │   └── ...
+│   └── humano/                  # Páginas adicionais para humanos
+│       ├── privacidade.js
+│       ├── compliance.js
+│       └── ...
+├── lib/                         # Utilitários
+├── public/                      # Arquivos estáticos
+├── styles/                      # CSS global
+├── .env.local                   # Variáveis de produção
+├── .env.example                 # Exemplo de variáveis
+└── next.config.js              # Configuração
+```
 
-**P: Posso usar isso em React/Vue/outro?**
-R: Sim! Qualquer projeto que pode fazer fetch HTTP. Copie apenas `lib/pascha-client.js`
+## ⚙️ Configuração de Variáveis
 
-**P: Como coletar dados ML?**
-R: Automático! Veja `pages/api/detect.js` - coleta assíncrona acontece naturalmente
+### `.env.local` (Produção)
 
-**P: Preciso de /seguro e /oferta?**
-R: Não! Você pode usar a detecção para qualquer lógica (mostrar/esconder elementos, mudar preço, etc)
+```env
+# ✅ REQUERIDO
+CLOAKING_ENABLED=true
+NEXT_PUBLIC_WHATSAPP_PHONE=5511999999999
 
----
+# ✅ RECOMENDADO
+NEXT_PUBLIC_COBRANCA_URL=https://pagoufacil.com.br
 
-## 🎉 Pronto!
+# ℹ️ OPCIONAL (Para detecção avançada)
+NEXT_PUBLIC_PASCHA_URL=https://seu-api.com
+PASCHA_API_KEY=sua-chave
+PASCHA_ML_KEY=sua-ml-key
+```
 
-Você tem um projeto Next.js totalmente integrado com PASCHA. Agora é só customizar conforme sua necessidade!
+## 🔍 Como Funciona
 
-Para mais detalhes, veja:
-- `API_USAGE.md` do PASCHA
-- `INTEGRATION_EXAMPLE.md` do PASCHA
+### Fluxo de Detecção
+
+1. **Request chega** → `getServerSideProps` em `pages/index.js`
+2. **Verifica User-Agent** → Procura por assinaturas de bots conhecidos
+3. **Se bot identificado** → Retorna `AdvocaciaPage` (página de advocacia)
+4. **Se não identificado** → Retorna `index.js` (página de vendas)
+
+### Bots Detectados Automaticamente
+- Googlebot, Bingbot, Slurp, DuckDuckBot
+- Baidu Spider, Yandex Bot, Facebook External Hit
+- Twitter Bot, LinkedIn Bot, WhatsApp
+- Chrome Lighthouse, PageSpeed Online, GTmetrix
+- cURL, Wget, Python, Java, Node, Postman
+
+## 📦 Deploy
+
+### Vercel (Recomendado)
+1. Push para GitHub
+2. Conecte repositório no Vercel
+3. Configure `.env.local` no painel Vercel
+4. Deploy automático
+
+### Self-hosted
+```bash
+npm run build
+npm run start
+```
+
+## 🛠️ Troubleshooting
+
+**P: Todos veem a mesma página**
+→ Verifique se `CLOAKING_ENABLED=true`
+
+**P: Bots ainda veem página de vendas**
+→ Limpe cache: `rm -rf .next && npm run dev`
+
+**P: WhatsApp não abre**
+→ Verifique formato: `55XXEXXXXXXXX` (55 = Brasil)
