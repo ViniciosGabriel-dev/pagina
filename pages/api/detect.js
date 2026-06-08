@@ -10,22 +10,8 @@ export default async function handler(req, res) {
                req.socket.remoteAddress ||
                'unknown';
 
-    // [PHASE 1] Verificar Vercel Bot ID (nativo, instantâneo)
-    const vercelBotId = req.headers['x-vercel-botid'] === 'true';
-    if (vercelBotId) {
-      console.log('[DETECT] 🤖 Bot detectado via Vercel Bot ID:', userAgent.substring(0, 80));
-      return res.status(200).json({
-        success: true,
-        isBot: true,
-        score: 95,
-        confidence: 'very-high',
-        recommendation: 'educativo',
-        cached: false,
-        source: 'vercel-botid'
-      });
-    }
-
-    // [PHASE 2] Fallback: PASCHA API (para casos não detectados por Vercel)
+    // Chamar PASCHA API (todas as detecções centralizadas lá)
+    // Front é apenas um proxy - PASCHA faz TODA a lógica
     const botDetectionUrl = process.env.BOT_DETECTION_API_URL;
 
     if (!botDetectionUrl) {
@@ -55,6 +41,7 @@ export default async function handler(req, res) {
           'accept-encoding': req.headers['accept-encoding'] || '',
           'accept': req.headers['accept'] || '',
           'connection': req.headers['connection'] || '',
+          'x-vercel-botid': req.headers['x-vercel-botid'] || '',
         },
       }),
     });
