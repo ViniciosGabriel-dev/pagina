@@ -57,9 +57,13 @@ export async function getServerSideProps(context) {
     });
 
     const detection = await response.json();
-    const isBot = detection.confidence === 'high' && detection.isBot;
 
-    console.log(`[CLOAKING] Resultado PASCHA: score=${detection.score}, confidence=${detection.confidence}, isBot=${isBot}`);
+    // Considerar como bot se: isBot=true E confiança >= 'high'
+    const confidenceLevels = { 'very-low': 0, 'low': 1, 'medium': 2, 'high': 3, 'very-high': 4 };
+    const minConfidence = process.env.CLOAKING_MIN_CONFIDENCE || 'high';
+    const isBot = detection.isBot && (confidenceLevels[detection.confidence] || 0) >= (confidenceLevels[minConfidence] || 3);
+
+    console.log(`[CLOAKING] Resultado PASCHA: score=${detection.score}, confidence=${detection.confidence}, isBot=${isBot}, minRequired=${minConfidence}`);
     console.log(`[CLOAKING] Ação: ${isBot ? '🤖 Página educativa (bot detectado)' : '✅ Página de vendas (humano confirmado)'}`);
 
     return {
