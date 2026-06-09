@@ -118,6 +118,7 @@ export default async function handler(req, res) {
       userAgent,
       headers,
       geo: req.geo || { country: 'unknown' },
+      nome: process.env.SITE_NAME || 'Projeto desconhecido',
       ...(behaviorData && { behaviorData }),
       ...(canvasFingerprint && { canvasFingerprint })
     });
