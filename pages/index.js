@@ -32,20 +32,8 @@ export async function getServerSideProps(context) {
   // 🟢 PRODUÇÃO: Cloaking ativado - detectar bot vs humano
   console.log('[CLOAKING] 🟢 ATIVADO — Bot detection ligada');
 
-  if (isKnownBot(userAgent)) {
-    console.log(`[CLOAKING] 🤖 Bot conhecido detectado: ${userAgent.substring(0, 60)}`);
-    console.log(`[CLOAKING] IP: ${ip}`);
-    console.log(`[CLOAKING] Ação: Mostrando página educativa`);
-    return {
-      props: {
-        showLandingPage: true,
-        cloakingEnabled: true,
-        whatsappPhone,
-      },
-    };
-  }
-
-  // User-agent desconhecido: chamar API PASCHA para detecção avançada
+  // Sempre chamar API para detecção completa (garante Telegram notification)
+  // Nota: A detecção é feita no backend PASCHA para consistência
   try {
     const protocol = context.req.headers['x-forwarded-proto'] || 'http';
     const host = context.req.headers['x-forwarded-host'] || context.req.headers.host;

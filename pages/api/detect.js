@@ -49,13 +49,17 @@ export default async function handler(req, res) {
     const hasPaschaUrl = !!process.env.NEXT_PUBLIC_PASCHA_URL;
     const hasPaschaKey = !!process.env.PASCHA_API_KEY;
     const hasMlKey = !!process.env.PASCHA_ML_KEY;
+    const siteName = process.env.SITE_NAME || 'Projeto desconhecido';
 
     if (!hasPaschaUrl || !hasPaschaKey) {
       console.error('[DETECT] Variáveis de ambiente não configuradas:', {
         NEXT_PUBLIC_PASCHA_URL: hasPaschaUrl,
         PASCHA_API_KEY: hasPaschaKey,
-        PASCHA_ML_KEY: hasMlKey
+        PASCHA_ML_KEY: hasMlKey,
+        SITE_NAME: siteName
       });
+    } else {
+      console.log('[DETECT] ✅ Variáveis configuradas. Site name:', siteName);
     }
 
     // Debug: Log do que será enviado à API PASCHA
@@ -67,46 +71,8 @@ export default async function handler(req, res) {
     });
     console.log(`[DETECT] IP: ${ip} | UA: ${userAgent.substring(0, 60)}`);
 
-    // Detecção customizada de bots comuns (antes da PASCHA)
-    const botSignatures = [
-      'googlebot',
-      'bingbot',
-      'slurp',
-      'duckduckbot',
-      'baiduspider',
-      'yandexbot',
-      'facebookexternalhit',
-      'twitterbot',
-      'whatsapp',
-      'linkedinbot',
-      'chrome-lighthouse',
-      'pagespeedonline',
-      'gtmetrix',
-      'perf.tools',
-      'curl',
-      'wget',
-      'python',
-      'java',
-      'node',
-      'postman',
-      'insomnia'
-    ];
-
-    const userAgentLower = userAgent.toLowerCase();
-    const isCommonBot = botSignatures.some(sig => userAgentLower.includes(sig));
-
-    if (isCommonBot) {
-      console.log('[DETECT] Bot detectado por assinatura comum:', userAgent);
-      return res.status(200).json({
-        success: true,
-        isBot: true,
-        score: 95,
-        confidence: 'very-high',
-        recommendation: 'educativo',
-        cached: false,
-        scoreBreakdown: { botSignature: 95, browserHeaders: 0, tlsFingerprint: 0, proxyDetection: 0, encodingHeaders: 0 }
-      });
-    }
+    // Nota: Detecção de bots é feita integralmente no backend PASCHA
+    // Isso garante que Telegram seja sempre notificado corretamente
 
 
     // Extrair dados comportamentais e canvas fingerprint do body
