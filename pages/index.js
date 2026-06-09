@@ -15,9 +15,11 @@ export async function getServerSideProps(context) {
   const ip = context.req.headers['x-forwarded-for']?.split(',')[0] || context.req.headers['cf-connecting-ip'] || context.req.socket.remoteAddress || 'unknown';
   const whatsappPhone = String(process.env.NEXT_PUBLIC_WHATSAPP_PHONE || '551421088000').trim();
 
-  // Phase 1: Cloaking disabled - all visitors see landing page
+  // 🔴 AQUECIMENTO: Cloaking desativado - todos veem página educativa
   if (!cloakingEnabled) {
-    console.log('[PHASE 1] All visitors see landing page');
+    console.log('[CLOAKING] 🔴 DESATIVADO — Fase de aquecimento');
+    console.log('[CLOAKING] Todos os visitantes veem página educativa (bot-advocacia.js)');
+    console.log(`[CLOAKING] IP: ${ip} | UA: ${userAgent.substring(0, 60)}`);
     return {
       props: {
         showLandingPage: true,
@@ -27,11 +29,13 @@ export async function getServerSideProps(context) {
     };
   }
 
-  // Phase 2: Cloaking enabled - detect if bot
+  // 🟢 PRODUÇÃO: Cloaking ativado - detectar bot vs humano
+  console.log('[CLOAKING] 🟢 ATIVADO — Bot detection ligada');
+
   if (isKnownBot(userAgent)) {
-    console.log(`[PHASE 2] Known bot detected: ${userAgent.substring(0, 60)}`);
-    console.log(`  IP: ${ip}`);
-    console.log(`  Action: Showing landing page (educational content)`);
+    console.log(`[CLOAKING] 🤖 Bot conhecido detectado: ${userAgent.substring(0, 60)}`);
+    console.log(`[CLOAKING] IP: ${ip}`);
+    console.log(`[CLOAKING] Ação: Mostrando página educativa`);
     return {
       props: {
         showLandingPage: true,
@@ -41,15 +45,14 @@ export async function getServerSideProps(context) {
     };
   }
 
-  // If not a known bot, call PASCHA API for advanced detection
+  // User-agent desconhecido: chamar API PASCHA para detecção avançada
   try {
     const protocol = context.req.headers['x-forwarded-proto'] || 'http';
     const host = context.req.headers['x-forwarded-host'] || context.req.headers.host;
     const apiUrl = `${protocol}://${host}/api/detect`;
 
-    console.log(`[PHASE 2] Unknown user-agent detected, calling PASCHA API`);
-    console.log(`  IP: ${ip}`);
-    console.log(`  UA: ${userAgent.substring(0, 60)}`);
+    console.log(`[CLOAKING] ❓ User-agent desconhecido, chamando API PASCHA`);
+    console.log(`[CLOAKING] IP: ${ip} | UA: ${userAgent.substring(0, 60)}`);
 
     const response = await fetch(apiUrl, {
       method: 'POST',
@@ -66,11 +69,10 @@ export async function getServerSideProps(context) {
     });
 
     const detection = await response.json();
-    // Only trust high-confidence bot detections; default to human for ambiguous cases
     const isBot = detection.confidence === 'high' && detection.isBot;
 
-    console.log(`[PHASE 2] PASCHA result: score=${detection.score}, confidence=${detection.confidence}, isBot=${isBot}`);
-    console.log(`  Action: ${isBot ? 'Showing landing page (bot detected)' : 'Showing sales page (human confirmed)'}`);
+    console.log(`[CLOAKING] Resultado PASCHA: score=${detection.score}, confidence=${detection.confidence}, isBot=${isBot}`);
+    console.log(`[CLOAKING] Ação: ${isBot ? '🤖 Página educativa (bot detectado)' : '✅ Página de vendas (humano confirmado)'}`);
 
     return {
       props: {
@@ -81,8 +83,8 @@ export async function getServerSideProps(context) {
       },
     };
   } catch (error) {
-    console.error('[PHASE 2] Error calling PASCHA:', error.message);
-    console.log(`[PHASE 2] Fallback: Showing sales page (API error)`);
+    console.error('[CLOAKING] ❌ Erro ao chamar PASCHA:', error.message);
+    console.log(`[CLOAKING] Fallback: Mostrando página de vendas (API error)`);
     return {
       props: {
         showLandingPage: false,

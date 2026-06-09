@@ -1,7 +1,14 @@
 /**
- * API Route: Detecta visitante via PASCHA
+ * API Route: Proxy para detecção de bot via PASCHA backend
  * Endpoint: POST /api/detect
- * Retorna: { isBot, score, recommendation, scoreBreakdown }
+ *
+ * Responsabilidades:
+ * 1. Extrair IP e headers da requisição do cliente
+ * 2. Chamar backend PASCHA com Bearer token
+ * 3. Coletar dados ML de forma assíncrona
+ * 4. Retornar resultado estruturado
+ *
+ * Retorna: { isBot, score, confidence, recommendation, scoreBreakdown, cached }
  */
 
 import pascha from '@/lib/pascha-client';

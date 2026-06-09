@@ -30,10 +30,10 @@ export default function AdvocaciaPage({ whatsappPhone = '551199999999' }) {
   };
 
   return (
-    <div className="bg-white text-gray-900">
+    <div suppressHydrationWarning className="bg-white text-gray-900">
       <Head>
         {/* Meta Tags Essenciais */}
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
